@@ -3872,10 +3872,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
   width: 100% !important;
 }
 
-.catalog-menu-block .large-catalog-menu__blockNavs--wrap-naw nav h3 {
-  margin: 18px 0 9px !important;
-}
-
 .catalog-menu-block .large-catalog-menu__blockNavs nav {
   width: 100%;
 }
@@ -14788,6 +14784,15 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 }
 
+@media (min-width: 1101px) {
+  .large-catalog-menu__blockNavs--wrap-naw:not(:nth-child(1)) nav:not(:first-child) h3,
+  .large-catalog-menu__blockNavs--wrap-naw:not(:nth-child(2)) nav:not(:first-child) h3,
+  .large-catalog-menu__blockNavs--wrap-naw:not(:nth-child(3)) nav:not(:first-child) h3,
+  .large-catalog-menu__blockNavs--wrap-naw:not(:nth-child(4)) nav:not(:first-child) h3 {
+    margin: 18px 0 9px !important;
+  }
+}
+
 @media screen and (min-width: 1161px) {
   .page-product__wrapProductSliders {
     top: 124px;
@@ -17771,10 +17776,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
     padding-top: 9px;
   }
 
-  .catalog-menu-block .large-catalog-menu__blockNavs--wrap-naw nav h3 {
-    margin: 0 !important;
-  }
-
   .catalog-menu-block .large-catalog-menu__blockNavs nav {
     display: flex;
     flex-direction: column;
@@ -17795,6 +17796,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    margin-bottom: 0;
     padding-right: 15px;
     position: relative;
     /*&::after {
@@ -22819,6 +22821,14 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .large-catalog-menu__blockNavs--wrap-naw:nth-child(2) nav:nth-child(1) h3 {
     margin-top: 0 !important;
   }
+
+  .large-catalog-menu__blockNavs--wrap-naw nav h3 {
+    margin: 18px 0 9px !important;
+  }
+
+  .large-catalog-menu__blockNavs--wrap-naw:nth-child(3) nav:first-child h3 {
+    margin-top: 0 !important;
+  }
 }
 
 @media (min-width: 801px) and (max-width: 1280px) {
@@ -22863,6 +22873,24 @@ body._touch .header .menu__list > li._active .menu__arrow {
 @media (min-width: 801px) and (max-width: 1100px) {
   .header__allResultSearch {
     top: 157px;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1100px) {
+  .large-catalog-menu__blockNavs--wrap-naw:not(:nth-child(1)) nav h3,
+  .large-catalog-menu__blockNavs--wrap-naw:not(:nth-child(2)) nav h3,
+  .large-catalog-menu__blockNavs--wrap-naw:not(:nth-child(3)) nav h3 {
+    margin: 18px 0 9px !important;
+  }
+
+  .large-catalog-menu__blockNavs--wrap-naw:not(:nth-child(3)) nav:first-child h3 {
+    margin-top: 0 !important;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 960px) {
+  .large-catalog-menu__blockNavs--wrap-naw nav h3 {
+    margin: 18px 0 9px !important;
   }
 }
 
