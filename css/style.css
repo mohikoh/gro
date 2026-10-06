@@ -2694,7 +2694,7 @@ html.search-in-focus .header__allResultSearch {
   left: 0;
   height: 118px;
   position: fixed;
-  transition: top 0.8s ease 0s, box-shadow 0.3s ease 0s;
+  transition: 0.3s ease 0s;
   top: 0;
   width: 100%;
   z-index: 50;
@@ -2824,7 +2824,7 @@ html.search-in-focus .header__allResultSearch {
   height: 48px;
   margin-left: 21px;
   position: relative;
-  transition: border 0.3s ease 0s;
+  transition: 0.3s ease 0s;
   width: calc(100% - 317px - 21px - 303px);
 }
 
@@ -2916,6 +2916,7 @@ html.search-in-focus .header__allResultSearch {
   position: absolute;
   right: 0;
   visibility: hidden;
+  transition: 0.6s ease 0s;
   top: 50px;
   z-index: -1;
 }
@@ -6185,6 +6186,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
   margin-left: 10px;
   position: relative;
   width: 16px;
+}
+
+.selected-values__selected-value button:hover svg path {
+  stroke: #ec008c;
 }
 
 .selected-values__selected-value button svg,
@@ -14627,7 +14632,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .header__wrapper::after {
-    background-color: #041F23;
+    background-color: rgba(0, 0, 0, 0.2);
     bottom: 0;
     content: "";
     left: 0;
@@ -14636,7 +14641,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
     pointer-events: none;
     position: fixed;
     right: 0;
-    transition: opacity 0.3s ease 0s;
+    transition: 0.3s ease 0s;
     top: 0;
     width: 100%;
     z-index: -1;
@@ -23753,10 +23758,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .catalog-page__showMoreProducts:hover {
     background-color: #EC008C;
     color: #fff !important;
-  }
-
-  .selected-values__selected-value button:hover svg path {
-    stroke: #0ED5FF;
   }
 
   .catalog-page__reviewsBlockWithStars a:hover {
