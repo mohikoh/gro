@@ -258,19 +258,31 @@ if (sliderAboveCatalog) {
       effect: 'slide',
       breakpoints: {
          0: {
-            slidesPerView: 4.28,
+            slidesPerView: 3.23,
          },
-         461: {
-            slidesPerView: 3.5,
+         368: {
+            slidesPerView: 4.11,
          },
-         576: {
-            slidesPerView: 4,
+         421: {
+            slidesPerView: 4.3,
+         },
+         500: {
+            slidesPerView: 5.2,
+         },
+         701: {
+            slidesPerView: 6,
+         },
+         780: {
+            slidesPerView: 7,
          },
          1025: {
             slidesPerView: 8,
          },
-         1281: {
+         1101: {
             slidesPerView: 10,
+         },
+         1281: {
+            slidesPerView: 12,
          }
       },
    });
