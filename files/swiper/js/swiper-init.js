@@ -291,14 +291,15 @@ if (sliderAboveCatalog) {
 let pageProductWrapProductSliders = document.querySelector('.page-product__wrapProductSliders')
 if (pageProductWrapProductSliders) {
    var swiper = new Swiper(".page-product__sliderSmall", {
-      spaceBetween: 3,
-      slidesPerView: 6,
+      spaceBetween: 8,
+      slidesPerView: 'auto',
       slidesPerGroup: 1,
       //freeMode: true,
       watchSlidesProgress: true,
       watchOverflow: true,
       loop: false,
       initialSlide: 1,
+      /*
       breakpoints: {
          0: {
             slidesPerView: 5.32,
@@ -317,6 +318,7 @@ if (pageProductWrapProductSliders) {
             spaceBetween: 3,
          },
       },
+      */
    });
    var swiper2 = new Swiper(".page-product__sliderBig", {
       spaceBetween: 50,
@@ -388,7 +390,7 @@ if (pageProductColorsSlider) {
       effect: 'slide',
       breakpoints: {
          0: {
-            slidesPerView: 5.30,
+            slidesPerView: 4,
             spaceBetween: 8,
          },
          721: {
@@ -403,7 +405,35 @@ if (pageProductColorsSlider) {
    });
 }
 
-let aPerfectCombinationSlider = document.querySelector('.a-perfect-combination-slider')
+let aPerfectCombinationPopupSlider = document.querySelector('.a-perfect-combination-popup-slider')
+if (aPerfectCombinationPopupSlider) {
+   new Swiper(aPerfectCombinationPopupSlider, {
+      autoHeight: true,
+      slidesPerView: 3.58,
+      slidesPerGroup: 1,
+      watchOverflow: true,
+      spaceBetween: 16,
+      speed: 800,
+      effect: 'slide',
+      breakpoints: {
+         0: {
+            slidesPerView: 2.5,
+            spaceBetween: 8,
+         },
+         500: {
+            slidesPerView: 3.5,
+            spaceBetween: 30,
+            /*
+            scrollbar: {
+               el: '.swiper-scrollbar',
+               draggable: true,
+            },
+            */
+         }
+      },
+   });
+}
+let aPerfectCombinationSlider = document.querySelector('.a-perfect-combination__slider')
 if (aPerfectCombinationSlider) {
    new Swiper(aPerfectCombinationSlider, {
       autoHeight: true,
@@ -415,20 +445,36 @@ if (aPerfectCombinationSlider) {
       effect: 'slide',
       breakpoints: {
          0: {
-            slidesPerView: 2.62,
-            spaceBetween: 8,
+            slidesPerView: 2.38,
+            spaceBetween: 10,
+         },
+         481: {
+            slidesPerView: 3.30,
+            spaceBetween: 10,
          },
          576: {
-            slidesPerView: 3.58,
-            spaceBetween: 16,
+            slidesPerView: 3,
+            spaceBetween: 25,
          },
          721: {
-            slidesPerView: 3.58,
-            spaceBetween: 16,
-            scrollbar: {
-               el: '.swiper-scrollbar',
-               draggable: true,
-            },
+            slidesPerView: 4,
+            spaceBetween: 25,
+         },
+         801: {
+            slidesPerView: 5,
+            spaceBetween: 25,
+         },
+         1025: {
+            slidesPerView: 3.3,
+            spaceBetween: 15,
+         },
+         1101: {
+            slidesPerView: 4.3,
+            spaceBetween: 15,
+         },
+         1370: {
+            slidesPerView: 5,
+            spaceBetween: 15,
          }
       },
    });
