@@ -4,10 +4,10 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261009200219">
-   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261009200219">
-   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261009200219">
-   <link rel="stylesheet" href="css/style.min.css?_v=20261009200219">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261010194836">
+   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261010194836">
+   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261010194836">
+   <link rel="stylesheet" href="css/style.min.css?_v=20261010194836">
    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
    <title>iPhone 17 Pro Max</title>
 </head>
@@ -506,7 +506,7 @@
          </a>
       </li>
       <li id="mobile-link-to-profole">
-         <a href="#show-form-entrance-popup" class="not-authorized no-link"><!-- not-authorized no-link, authorized -->
+         <a href="#show-form-entrance-popup" class="not-authorized popup-link no-link"><!-- not-authorized popup-link no-link, authorized -->
             <div class="mobile-menu__blockIcon">
                <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.25 10.1389C12.7353 10.1389 14.75 8.14904 14.75 5.69444C14.75 3.23985 12.7353 1.25 10.25 1.25C7.76472 1.25 5.75 3.23985 5.75 5.69444C5.75 8.14904 7.76472 10.1389 10.25 10.1389Z" stroke="black" stroke-width="2.5" stroke-linejoin="round"/>
@@ -4858,7 +4858,7 @@
    </div>
 </div>
 
-<div id="show-form-entrance-popup" class="popup popup__entrance">
+<div id="show-form-entrance-popup" class="popup popup__entrance entrance">
    <div class="popup__body">
       <div class="popup__content">
          <a href="" class="popup__close close-popup">
@@ -4866,14 +4866,24 @@
                <path d="M9 1L1 9M1 1L9 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
          </a>
-         <h3 class="larger">Вхід <a href="#show-form-registration-popup" class="popup-link">Реєстрація</a></h3>
+         <h3><span>Вхід</span> <a href="#show-form-registration-popup" class="popup-link">Реєстрація</a></h3>
          <form action="#" class="popup-form">
             <label class="popup-form__label">Електронна пошта / Телефон</label>
             <input type="text" class="popup-form__field input">
             <label class="popup-form__label">Пароль</label>
-            <input type="text" class="popup-form__field input">
-            <a href="#show-form-forgot-your-password-popup" class="popup__forgot-your-password popup-link">Забули пароль</a>
-            <button type="submit" class="popup-form__submit blick-btn entrance-button-demo">Увійти</button>
+            <div class="popup-form__password-wrap">
+               <input type="password" class="popup-form__field input">
+               <button type="button" class="popup-form__password-toggle" aria-label="Показати пароль">
+                  <svg class="icon-show" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" id="Eye-Optic--Streamline-Plump-Remix">
+                     <path id="Union" fill="black" fill-rule="evenodd" d="M24 2c1.1046 0 2 0.89543 2 2v4.90712c2.251 0.17874 4.4167 0.65686 6.4538 1.39398l2.5184 -4.35447c0.553 -0.95617 1.7771 -1.28418 2.7342 -0.73263 0.957 0.55155 1.2845 1.7738 0.7315 2.72997L36.1071 11.974c1.7523 0.9843 3.3663 2.1762 4.8059 3.5418l3.1443 -3.1407c0.7814 -0.7806 2.0489 -0.781 2.8309 -0.0009 0.7819 0.7801 0.7823 2.0453 0.0009 2.8259l-3.3111 3.3074c1.6603 2.2153 2.9318 4.7256 3.7157 7.4386 0.2755 0.9532 0.2759 1.9652 0.0012 2.9187C44.4369 38.7854 35.0595 46 23.9984 46 12.9436 46 3.5708 38.7937 0.706878 28.8821c-0.275446 -0.9533 -0.275845 -1.9653 -0.00115 -2.9188 0.781702 -2.7134 2.051102 -5.2244 3.709262 -7.4406L1.10616 15.199c-0.779295 -0.7828 -0.77535 -2.048 0.00881 -2.8259 0.78416 -0.778 2.05159 -0.774 2.83089 0.0088l3.13237 3.1464c1.43808 -1.3663 3.05057 -2.559 4.80137 -3.5444L9.55893 7.93652c-0.54942 -0.95823 -0.21733 -2.17924 0.74177 -2.72722 0.959 -0.54797 2.1819 -0.21539 2.7313 0.74284l2.4979 4.35646c2.0418 -0.74089 4.213 -1.2215 6.4701 -1.40113V4c0 -1.10457 0.8954 -2 2 -2Zm0 10.8295c-0.0239 0 -0.0477 -0.0004 -0.0713 -0.0012 -2.938 0.01 -5.723 0.6241 -8.2319 1.7177 -0.0106 0.0063 -0.0213 0.0125 -0.0321 0.0187 -0.1264 0.0722 -0.2574 0.1291 -0.3908 0.1713 -2.5441 1.1783 -4.7897 2.8548 -6.60338 4.8947 -0.04019 0.0504 -0.08316 0.0993 -0.12892 0.1465 -1.83282 2.1028 -3.21105 4.5819 -3.9922 7.2934 -0.06596 0.229 -0.06587 0.4722 0.00028 0.7011C6.91057 35.9425 14.6943 42 23.9984 42c9.3095 0 17.0968 -6.0646 19.4528 -14.2425 0.066 -0.229 0.0659 -0.4722 -0.0003 -0.7011 -0.7735 -2.6769 -2.129 -5.127 -3.9294 -7.2116 -0.0194 -0.0179 -0.0385 -0.0362 -0.0573 -0.055 -0.0809 -0.0807 -0.1535 -0.1666 -0.2176 -0.2566 -1.8247 -2.0252 -4.0779 -3.6859 -6.6267 -4.848 -0.0832 -0.0308 -0.1653 -0.0674 -0.2457 -0.1101 -2.5274 -1.1123 -5.3371 -1.7372 -8.3025 -1.7469 -0.0238 0.0009 -0.0477 0.0013 -0.0717 0.0013ZM13.2246 27.4127c0 -5.9423 4.8251 -10.7565 10.7735 -10.7565s10.7736 4.8142 10.7736 10.7565c0 5.9422 -4.8252 10.7564 -10.7736 10.7564s-10.7735 -4.8142 -10.7735 -10.7564Z" clip-rule="evenodd" stroke-width="1"></path>
+                  </svg>
+                  <svg class="icon-hide" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M3.45162 7C4.64943 8.94226 7.13216 10.2766 10.0007 10.2766C12.8691 10.2766 15.3519 8.94226 16.5497 7M4.76807 8.49255L2 10.5166M8.05052 10.0712L6.71767 13M15.2319 8.49255L18 10.5166M11.9448 10.0712L13.2777 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+               </button>
+            </div>
+            <a href="#show-form-forgot-your-password-popup" class="popup__forgot-your-password popup-link">Забули пароль?</a>
+            <button type="submit" class="popup-form__submit entrance-button-demo">Увійти</button><!-- blick-btn -->
             <div class="popup__wrap-social-buttons">
                <p><span>або за допомогою</span></p>
                <div class="wrap-buttons">
@@ -4883,9 +4893,11 @@
                   <a href="#">
                      <img src="images/svg/entrance-google-icon.svg" alt="">
                   </a>
+                  <!--
                   <a href="#">
                      <img src="images/svg/entrance-apple-icon.svg" alt="">
                   </a>
+                  -->
                </div>
             </div>
          </form>
@@ -4893,7 +4905,7 @@
    </div>
 </div>
 
-<div id="show-form-registration-popup" class="popup popup__entrance">
+<div id="show-form-registration-popup" class="popup popup__entrance registration">
    <div class="popup__body">
       <div class="popup__content">
          <a href="" class="popup__close close-popup">
@@ -4901,15 +4913,35 @@
                <path d="M9 1L1 9M1 1L9 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
          </a>
-         <h3 class="larger">Реєстрація <a href="#show-form-entrance-popup" class="popup-link">Вхід</a></h3>
+         <h3><a href="#show-form-entrance-popup" class="popup-link">Вхід</a> <span>Реєстрація</span></h3>
          <form action="#" class="popup-form">
             <label class="popup-form__label">Електронна пошта / Телефон</label>
             <input type="text" class="popup-form__field input" placeholder="stepan.bandera@gmail.com">
             <label class="popup-form__label">Пароль</label>
-            <input type="text" class="popup-form__field input">
+            <div class="popup-form__password-wrap">
+               <input type="password" class="popup-form__field input">
+               <button type="button" class="popup-form__password-toggle" aria-label="Показати пароль">
+                  <svg class="icon-show" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" id="Eye-Optic--Streamline-Plump-Remix">
+                     <path id="Union" fill="black" fill-rule="evenodd" d="M24 2c1.1046 0 2 0.89543 2 2v4.90712c2.251 0.17874 4.4167 0.65686 6.4538 1.39398l2.5184 -4.35447c0.553 -0.95617 1.7771 -1.28418 2.7342 -0.73263 0.957 0.55155 1.2845 1.7738 0.7315 2.72997L36.1071 11.974c1.7523 0.9843 3.3663 2.1762 4.8059 3.5418l3.1443 -3.1407c0.7814 -0.7806 2.0489 -0.781 2.8309 -0.0009 0.7819 0.7801 0.7823 2.0453 0.0009 2.8259l-3.3111 3.3074c1.6603 2.2153 2.9318 4.7256 3.7157 7.4386 0.2755 0.9532 0.2759 1.9652 0.0012 2.9187C44.4369 38.7854 35.0595 46 23.9984 46 12.9436 46 3.5708 38.7937 0.706878 28.8821c-0.275446 -0.9533 -0.275845 -1.9653 -0.00115 -2.9188 0.781702 -2.7134 2.051102 -5.2244 3.709262 -7.4406L1.10616 15.199c-0.779295 -0.7828 -0.77535 -2.048 0.00881 -2.8259 0.78416 -0.778 2.05159 -0.774 2.83089 0.0088l3.13237 3.1464c1.43808 -1.3663 3.05057 -2.559 4.80137 -3.5444L9.55893 7.93652c-0.54942 -0.95823 -0.21733 -2.17924 0.74177 -2.72722 0.959 -0.54797 2.1819 -0.21539 2.7313 0.74284l2.4979 4.35646c2.0418 -0.74089 4.213 -1.2215 6.4701 -1.40113V4c0 -1.10457 0.8954 -2 2 -2Zm0 10.8295c-0.0239 0 -0.0477 -0.0004 -0.0713 -0.0012 -2.938 0.01 -5.723 0.6241 -8.2319 1.7177 -0.0106 0.0063 -0.0213 0.0125 -0.0321 0.0187 -0.1264 0.0722 -0.2574 0.1291 -0.3908 0.1713 -2.5441 1.1783 -4.7897 2.8548 -6.60338 4.8947 -0.04019 0.0504 -0.08316 0.0993 -0.12892 0.1465 -1.83282 2.1028 -3.21105 4.5819 -3.9922 7.2934 -0.06596 0.229 -0.06587 0.4722 0.00028 0.7011C6.91057 35.9425 14.6943 42 23.9984 42c9.3095 0 17.0968 -6.0646 19.4528 -14.2425 0.066 -0.229 0.0659 -0.4722 -0.0003 -0.7011 -0.7735 -2.6769 -2.129 -5.127 -3.9294 -7.2116 -0.0194 -0.0179 -0.0385 -0.0362 -0.0573 -0.055 -0.0809 -0.0807 -0.1535 -0.1666 -0.2176 -0.2566 -1.8247 -2.0252 -4.0779 -3.6859 -6.6267 -4.848 -0.0832 -0.0308 -0.1653 -0.0674 -0.2457 -0.1101 -2.5274 -1.1123 -5.3371 -1.7372 -8.3025 -1.7469 -0.0238 0.0009 -0.0477 0.0013 -0.0717 0.0013ZM13.2246 27.4127c0 -5.9423 4.8251 -10.7565 10.7735 -10.7565s10.7736 4.8142 10.7736 10.7565c0 5.9422 -4.8252 10.7564 -10.7736 10.7564s-10.7735 -4.8142 -10.7735 -10.7564Z" clip-rule="evenodd" stroke-width="1"></path>
+                  </svg>
+                  <svg class="icon-hide" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M3.45162 7C4.64943 8.94226 7.13216 10.2766 10.0007 10.2766C12.8691 10.2766 15.3519 8.94226 16.5497 7M4.76807 8.49255L2 10.5166M8.05052 10.0712L6.71767 13M15.2319 8.49255L18 10.5166M11.9448 10.0712L13.2777 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+               </button>
+            </div>
             <label class="popup-form__label">Повторити пароль</label>
-            <input type="text" class="popup-form__field input">
-            <button type="submit" class="popup-form__submit blick-btn entrance-button-demo">Зареєструватись</button>
+            <div class="popup-form__password-wrap">
+               <input type="password" class="popup-form__field input">
+               <button type="button" class="popup-form__password-toggle" aria-label="Показати пароль">
+                  <svg class="icon-show" width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" id="Eye-Optic--Streamline-Plump-Remix">
+                     <path id="Union" fill="black" fill-rule="evenodd" d="M24 2c1.1046 0 2 0.89543 2 2v4.90712c2.251 0.17874 4.4167 0.65686 6.4538 1.39398l2.5184 -4.35447c0.553 -0.95617 1.7771 -1.28418 2.7342 -0.73263 0.957 0.55155 1.2845 1.7738 0.7315 2.72997L36.1071 11.974c1.7523 0.9843 3.3663 2.1762 4.8059 3.5418l3.1443 -3.1407c0.7814 -0.7806 2.0489 -0.781 2.8309 -0.0009 0.7819 0.7801 0.7823 2.0453 0.0009 2.8259l-3.3111 3.3074c1.6603 2.2153 2.9318 4.7256 3.7157 7.4386 0.2755 0.9532 0.2759 1.9652 0.0012 2.9187C44.4369 38.7854 35.0595 46 23.9984 46 12.9436 46 3.5708 38.7937 0.706878 28.8821c-0.275446 -0.9533 -0.275845 -1.9653 -0.00115 -2.9188 0.781702 -2.7134 2.051102 -5.2244 3.709262 -7.4406L1.10616 15.199c-0.779295 -0.7828 -0.77535 -2.048 0.00881 -2.8259 0.78416 -0.778 2.05159 -0.774 2.83089 0.0088l3.13237 3.1464c1.43808 -1.3663 3.05057 -2.559 4.80137 -3.5444L9.55893 7.93652c-0.54942 -0.95823 -0.21733 -2.17924 0.74177 -2.72722 0.959 -0.54797 2.1819 -0.21539 2.7313 0.74284l2.4979 4.35646c2.0418 -0.74089 4.213 -1.2215 6.4701 -1.40113V4c0 -1.10457 0.8954 -2 2 -2Zm0 10.8295c-0.0239 0 -0.0477 -0.0004 -0.0713 -0.0012 -2.938 0.01 -5.723 0.6241 -8.2319 1.7177 -0.0106 0.0063 -0.0213 0.0125 -0.0321 0.0187 -0.1264 0.0722 -0.2574 0.1291 -0.3908 0.1713 -2.5441 1.1783 -4.7897 2.8548 -6.60338 4.8947 -0.04019 0.0504 -0.08316 0.0993 -0.12892 0.1465 -1.83282 2.1028 -3.21105 4.5819 -3.9922 7.2934 -0.06596 0.229 -0.06587 0.4722 0.00028 0.7011C6.91057 35.9425 14.6943 42 23.9984 42c9.3095 0 17.0968 -6.0646 19.4528 -14.2425 0.066 -0.229 0.0659 -0.4722 -0.0003 -0.7011 -0.7735 -2.6769 -2.129 -5.127 -3.9294 -7.2116 -0.0194 -0.0179 -0.0385 -0.0362 -0.0573 -0.055 -0.0809 -0.0807 -0.1535 -0.1666 -0.2176 -0.2566 -1.8247 -2.0252 -4.0779 -3.6859 -6.6267 -4.848 -0.0832 -0.0308 -0.1653 -0.0674 -0.2457 -0.1101 -2.5274 -1.1123 -5.3371 -1.7372 -8.3025 -1.7469 -0.0238 0.0009 -0.0477 0.0013 -0.0717 0.0013ZM13.2246 27.4127c0 -5.9423 4.8251 -10.7565 10.7735 -10.7565s10.7736 4.8142 10.7736 10.7565c0 5.9422 -4.8252 10.7564 -10.7736 10.7564s-10.7735 -4.8142 -10.7735 -10.7564Z" clip-rule="evenodd" stroke-width="1"></path>
+                  </svg>
+                  <svg class="icon-hide" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M3.45162 7C4.64943 8.94226 7.13216 10.2766 10.0007 10.2766C12.8691 10.2766 15.3519 8.94226 16.5497 7M4.76807 8.49255L2 10.5166M8.05052 10.0712L6.71767 13M15.2319 8.49255L18 10.5166M11.9448 10.0712L13.2777 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+               </button>
+            </div>
+            <button type="submit" class="popup-form__submit entrance-button-demo">Зареєструватись</button><!-- blick-btn -->
             <div class="popup__wrap-social-buttons">
                <p><span>або за допомогою</span></p>
                <div class="wrap-buttons">
@@ -4919,9 +4951,11 @@
                   <a href="#">
                      <img src="images/svg/entrance-google-icon.svg" alt="">
                   </a>
+                  <!--
                   <a href="#">
                      <img src="images/svg/entrance-apple-icon.svg" alt="">
                   </a>
+                  -->
                </div>
             </div>
          </form>
@@ -4937,11 +4971,11 @@
                <path d="M9 1L1 9M1 1L9 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
          </a>
-         <h3 class="larger">Забули пароль</h3>
+         <h3>Забули пароль</h3>
          <form action="#" class="popup-form">
             <label class="popup-form__label">Електронна пошта</label>
             <input type="text" class="popup-form__field input" placeholder="stepan.bandera@gmail.com">
-            <button type="submit" class="popup-form__submit blick-btn entrance-button-demo">Нагадати пароль</button>
+            <button type="submit" class="popup-form__submit entrance-button-demo">Нагадати пароль</button><!-- blick-btn -->
          </form>
       </div>
    </div>
@@ -4978,6 +5012,29 @@ document.querySelectorAll('.phone-toggle').forEach(wrapper => {
          phoneLink.innerHTML = hiddenPhone;
       }
    });
+});
+
+// для поля пароль
+document.addEventListener('click', (event) => {
+   const button = event.target.closest('.popup-form__password-toggle');
+
+   if (!button) return;
+
+   const wrapper = button.closest('.popup-form__password-wrap');
+   const input = wrapper?.querySelector('input');
+
+   if (!input) return;
+
+   const isVisible = input.type === 'text';
+
+   input.type = isVisible ? 'password' : 'text';
+
+   button.classList.toggle('is-visible', !isVisible);
+
+   button.setAttribute(
+      'aria-label',
+      isVisible ? 'Показати пароль' : 'Приховати пароль'
+   );
 });
 </script>
 
@@ -5588,17 +5645,17 @@ document.querySelectorAll('.phone-toggle').forEach(wrapper => {
    
    </div>
    
-   <script src="files/swiper/js/swiper-bundle.min.js?_v=20261009200219"></script>
-   <script src="files/swiper/js/swiper-init.js?_v=20261009200219"></script>
+   <script src="files/swiper/js/swiper-bundle.min.js?_v=20261010194836"></script>
+   <script src="files/swiper/js/swiper-init.js?_v=20261010194836"></script>
 
-   <script src="js/script.min.js?_v=20261009200219"></script>
+   <script src="js/script.min.js?_v=20261010194836"></script>
 
-   <script src="files/js/demo-script.js?_v=20261009200219"></script>
+   <script src="files/js/demo-script.js?_v=20261010194836"></script>
 
-   <script src="files/js/jquery-3.7.1.min.js?_v=20261009200219"></script>
-   <script src="files/js/plus-minus.js?_v=20261009200219"></script>
+   <script src="files/js/jquery-3.7.1.min.js?_v=20261010194836"></script>
+   <script src="files/js/plus-minus.js?_v=20261010194836"></script>
 
-   <script src="files/custom-select/script.js?_v=20261009200219"></script>
+   <script src="files/custom-select/script.js?_v=20261010194836"></script>
 
 </body>
 </html>
