@@ -13614,7 +13614,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
 .payment-and-delivery h1 {
   font-size: 44px;
   line-height: 53px;
-  margin: -3px 0 28px;
+  margin: 13px 0 32px;
   text-align: center;
 }
 
@@ -13652,8 +13652,11 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .payment-and-delivery__content {
-  padding-bottom: 75px;
-  padding-top: 36px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+  padding-bottom: 64px;
+  padding-top: 64px;
 }
 
 .payment-and-delivery__block {
@@ -13767,6 +13770,105 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
 .payment-and-delivery__block.more-info p a.phone {
   margin-right: 12px;
+}
+
+.payment-and-delivery__wrap-table table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.payment-and-delivery__wrap-table table th,
+.payment-and-delivery__wrap-table table td {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 8px 12px;
+}
+
+.payment-and-delivery__wrap-table table thead tr th {
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding-bottom: 7px;
+  padding-top: 9px;
+  text-align: left;
+}
+
+.payment-and-delivery__wrap-table table thead tr th:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.payment-and-delivery__wrap-table table thead tr th:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.payment-and-delivery__wrap-table table thead tr th:last-child {
+  text-align: right;
+}
+
+.payment-and-delivery__wrap-table table tbody tr:nth-child(even) td {
+  background-color: #F8F8FA;
+}
+
+.payment-and-delivery__wrap-table table tbody tr:nth-child(even) td:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.payment-and-delivery__wrap-table table tbody tr:nth-child(even) td:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.payment-and-delivery__wrap-table table tbody tr td:first-child {
+  align-items: center;
+  display: flex;
+}
+
+.payment-and-delivery__wrap-table table tbody tr td:last-child {
+  text-align: right;
+}
+
+.payment-and-delivery__wrap-table table tbody tr td .wrap-icon {
+  background-color: #F0F0F3;
+  border-radius: 4px;
+  height: 32px;
+  flex: 0 0 32px;
+  margin-right: 12px;
+  position: relative;
+  width: 32px;
+}
+
+.payment-and-delivery__wrap-table table tbody tr td .wrap-icon svg,
+.payment-and-delivery__wrap-table table tbody tr td .wrap-icon img {
+  left: 50%;
+  max-height: 90%;
+  max-width: 90%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+.payment-and-delivery__block-under-table {
+  background-color: #F8F8FA;
+  border-radius: 8px;
+  margin-top: 23px;
+  padding: 16px;
+}
+
+.payment-and-delivery__block-under-table--text {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 8px;
+}
+
+.payment-and-delivery__block-under-table--email {
+  color: #EC008C;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 /* Page - Cooperation */
@@ -23919,11 +24021,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .payment-and-delivery #tabs .tabs__block {
     padding-bottom: 49px;
-  }
-
-  .payment-and-delivery__content {
-    padding-bottom: 38px;
-    padding-top: 20px;
   }
 
   .payment-and-delivery__block {
