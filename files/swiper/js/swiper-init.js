@@ -535,19 +535,19 @@ if (reviewsSlider) {
       },
       breakpoints: {
          0: {
-            slidesPerView: 1.255,
+            slidesPerView: 1.16,
          },
          576: {
-            slidesPerView: 2,
+            slidesPerView: 2.16,
          },
          861: {
-            slidesPerView: 1,
+            slidesPerView: 2.2,
          },
          1025: {
-            slidesPerView: 2,
+            slidesPerView: 2.3,
          },
-         1201: {
-            slidesPerView: 3,
+         1480: {
+            slidesPerView: 2.8,
          }
       },
    });
