@@ -1825,6 +1825,19 @@ body.lock {
   padding-left: 9px;
 }
 
+.popup .tab-form {
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.popup .tab-form .tab-form__wrap-custom-checkboxs {
+  padding-top: 19px;
+}
+
+.popup .tab-form .tab-form button {
+  margin-top: 7px;
+}
+
 .popup-form__wrapStarsRating {
   align-items: center;
   display: flex;
@@ -11916,6 +11929,44 @@ body._touch .header .menu__list > li._active .menu__arrow {
   top: 11px;
 }
 
+.tab-form__wrap-custom-checkboxs {
+  padding-bottom: 12px;
+  padding-top: 12px;
+  width: 100%;
+}
+
+.tab-form__wrap-custom-checkboxs .custom-checkbox {
+  padding: 4px 0 4px 35px;
+}
+
+.tab-form__wrap-custom-checkboxs input:not(:checked) ~ .custom-checkbox__box {
+  border: 2px solid #D1D1D7;
+}
+
+.tab-form__wrap-custom-checkboxs .custom-checkbox__box {
+  border-radius: 4px;
+  margin-left: -35px;
+}
+
+.tab-form__wrap-info {
+  width: 100%;
+}
+
+.tab-form__wrap-info p {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.tab-form__wrap-info p:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.tab-form__wrap-info p span {
+  color: #777781;
+}
+
 .tab-form__wrap-custom-photo--wrap-square {
   display: flex;
   flex-wrap: wrap;
@@ -12257,55 +12308,61 @@ body._touch .header .menu__list > li._active .menu__arrow {
   text-align: center;
 }
 
-.repair-of-apple-equipment__wrap-form {
-  max-width: 316px;
-  margin-left: auto;
-  margin-right: auto;
+.repair-of-apple-equipment__wrap-form p {
+  color: #000;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0 0 -4px;
+}
+
+.repair-of-apple-equipment__wrap-form h2 {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 17px 0 0;
 }
 
 .repair-of-apple-equipment__wrap-form-wrap-field-submit {
-  border: 1px solid #CCD2D3;
-  border-radius: 12px;
-  height: 54px;
   margin-top: 10px;
 }
 
 .repair-of-apple-equipment__wrap-form-wrap-field-submit form {
   display: flex;
-  height: inherit;
-  padding: 4px;
+  height: 48px;
+  margin-top: 12px;
 }
 
 .repair-of-apple-equipment__wrap-form-wrap-field-submit form input,
 .repair-of-apple-equipment__wrap-form-wrap-field-submit form button {
-  height: 44px;
+  height: 100%;
   outline: none;
-  border-radius: 12px;
-  font-size: 20px;
-  line-height: 44px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .repair-of-apple-equipment__wrap-form-wrap-field-submit form input {
-  border: none;
-  padding-left: 9px;
-  padding-right: 9px;
-  width: calc(100% - 126px);
+  border: 1px solid #D1D1D7;
+  margin-right: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: calc(100% - 12px - 117px);
 }
 
 .repair-of-apple-equipment__wrap-form-wrap-field-submit form input::-moz-placeholder {
-  color: #CCD2D3;
+  color: #A7A7B0;
 }
 
 .repair-of-apple-equipment__wrap-form-wrap-field-submit form input::placeholder {
-  color: #CCD2D3;
+  color: #A7A7B0;
 }
 
 .repair-of-apple-equipment__wrap-form-wrap-field-submit form button {
-  background-color: #FFC200;
+  background-color: #EC008C;
+  color: #fff;
   font-weight: 700;
   padding-left: 8px;
   padding-right: 8px;
-  width: 126px;
+  width: 117px;
 }
 
 .repair-of-apple-equipment__wrap-form-wrap-info {
@@ -12375,31 +12432,33 @@ body._touch .header .menu__list > li._active .menu__arrow {
 .repair-of-apple-equipment__items {
   display: flex;
   flex-wrap: wrap;
-  margin: 28px auto 55px;
-  max-width: 1041px;
+  gap: 16px;
+  margin: 40px auto 0;
 }
 
 .repair-of-apple-equipment__item {
-  background: #F2F4F4;
-  border-radius: 16px;
+  background-color: #F0F0F3;
+  border-radius: 8px;
   display: block;
-  padding-bottom: 39.4%;
-  margin-left: 10px;
-  margin-right: 10px;
+  overflow: hidden;
   position: relative;
-  width: calc(33.3333% - 20px);
+}
+
+.repair-of-apple-equipment__item.center-img img {
+  right: 50%;
+  transform: translateX(50%);
 }
 
 .repair-of-apple-equipment__item h4 {
-  color: #002024;
-  font-size: 28px;
-  line-height: 34.66px;
+  font-size: 20px;
+  line-height: 24px;
   margin: 0 auto;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 14%;
+  top: calc(13% - 1px);
   text-align: center;
+  min-width: 100%;
 }
 
 .repair-of-apple-equipment__item img {
@@ -12415,6 +12474,93 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
 .model-repair {
   overflow: hidden;
+  /*
+  #tabs {
+
+      .tabs__wrap-tab {
+
+          @include media-min-801 {
+              flex-wrap: wrap;
+          }
+
+          .tab {
+              margin-bottom: 6px;
+              margin-top: 6px;
+              padding-left: 32px;
+              padding-right: 32px;
+
+              @include media-max-1024 {
+                  padding-left: 15px;
+                  padding-right: 15px;
+              }
+          }
+      }
+
+      .tabs {
+
+          &__items {
+              justify-content: flex-start;
+              max-width: 780px;
+              margin: 38px -15px;
+
+              @include media-max-720 {
+                  width: calc(100% + 34px);
+              }
+              @include media-max-575 {
+                  margin-bottom: 2px;
+                  margin-top: 22px;
+              }
+          }
+
+          &__item {
+              margin: 0 15px 50px;
+              width: calc(25% - 30px);
+
+              @include media-max-575 {
+                  margin-bottom: 25px;
+                  width: calc(50% - 30px);
+              }
+
+              p {
+                  background-color: #FCF9F1;
+                  margin-top: 7px;
+              }
+          }
+
+          &__blockImage {
+              padding-bottom: 112%;
+
+              @include media-max-720 {
+                  padding-bottom: 120%;
+              }
+              @include media-max-575 {
+                  padding-bottom: 118%;
+              }
+          }
+      }
+  }
+  */
+}
+
+.model-repair__title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 53px;
+  margin: 0;
+}
+
+.model-repair__text-under-title {
+  color: #777781;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 16px 0 0;
+}
+
+.model-repair__title-above-tabs {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 24px;
+  margin: 41px 0 0;
 }
 
 .model-repair .exchange-trade-in__title {
@@ -12450,35 +12596,35 @@ body._touch .header .menu__list > li._active .menu__arrow {
   padding: 1px 9px 0;
 }
 
+.model-repair #tabs .tabs__wrap-tab {
+  margin-left: 0;
+}
+
 .model-repair #tabs .tabs__wrap-tab .tab {
-  margin-bottom: 6px;
-  margin-top: 6px;
-  padding-left: 32px;
-  padding-right: 32px;
+  flex: 0 0 89px;
+  width: 89px;
 }
 
 .model-repair #tabs .tabs__items {
-  justify-content: flex-start;
-  max-width: 780px;
-  margin: 38px -15px;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .model-repair #tabs .tabs__item {
-  margin: 0 15px 50px;
-  width: calc(25% - 30px);
+  margin-left: 0;
+  margin-right: 0;
+  width: 114px;
 }
 
 .model-repair #tabs .tabs__item p {
-  background-color: #FCF9F1;
-  margin-top: 7px;
-}
-
-.model-repair #tabs .tabs__blockImage {
-  padding-bottom: 112%;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .model-repair__items {
-  padding-bottom: 112px;
+  margin-bottom: 80px;
+  margin-top: -12px;
 }
 
 .model-repair__sidebar {
@@ -12486,7 +12632,7 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .model-repair__sidebarBlock:not(:first-child) {
-  padding-top: 52px;
+  padding-top: 41px;
 }
 
 .model-repair__sidebarBlock .tab-form {
@@ -12498,20 +12644,32 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .model-repair__sidebarBlock .tab-form button {
+  background-color: #EC008C;
   margin-top: 16px;
 }
 
-.model-repair__sidebarBlock .tab-form button:not(:hover) {
-  background-color: #FFC200;
+.model-repair__sidebarBlock .tab-form button:hover {
+  background-color: #D0007B;
 }
 
 .model-repair__sidebarTitle {
+  color: #000;
   font-size: 20px;
+  font-weight: 700;
   line-height: 28px;
-  margin: 0 0 -4px;
+  margin: 0 0 4px;
 }
 
 .model-repair__sidebar .repair-of-apple-equipment__wrap-form {
+  max-width: 100%;
+}
+
+.model-repair .exchange-trade-in__itemBlock {
+  max-width: 100%;
+  margin-bottom: 14px;
+}
+
+.model-repair .exchange-trade-in__itemBlock .block--faq {
   max-width: 100%;
 }
 
@@ -12532,11 +12690,16 @@ body._touch .header .menu__list > li._active .menu__arrow {
   overflow: visible !important;
 }
 
+.types-of-repair .exchange-trade-in__title {
+  max-width: 100% !important;
+  text-align: left !important;
+}
+
 .types-of-repair__items {
   display: flex;
   flex-wrap: wrap;
   max-width: 895px;
-  margin: 47px -15px 0;
+  margin: 48px -15px 0;
 }
 
 .types-of-repair__item {
@@ -12545,26 +12708,36 @@ body._touch .header .menu__list > li._active .menu__arrow {
   width: calc(33.3333% - 30px);
 }
 
+.types-of-repair__item-content {
+  align-items: center;
+  display: flex;
+  width: calc(100% - 40px);
+}
+
 .types-of-repair__itemBlockIcon {
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 55px;
-  margin-right: 22px;
-  flex: 0 0 55px;
-  width: 55px;
+  height: 40px;
+  flex: 0 0 40px;
+  width: 40px;
+}
+
+.types-of-repair__itemBlockIcon img {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .types-of-repair__item h3 {
-  font-size: 20px;
-  line-height: 28px;
-  max-width: 150px;
+  font-size: 15px;
+  line-height: 20px;
+  padding-left: 12px;
   margin: 0;
 }
 
 .types-of-repair__services {
-  margin-bottom: 57px;
-  margin-top: 57px;
+  margin-bottom: 21px;
+  margin-top: 48px;
 }
 
 .types-of-repair__servicesHead {
@@ -12588,15 +12761,16 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
 .types-of-repair__servicesButton {
   align-items: center;
-  background-color: #E5E9E9;
-  border-radius: 12px;
+  background-color: #EC008C;
+  border-radius: 8px;
+  color: #fff;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
   display: none;
   justify-content: center;
   height: 48px;
-  margin: 37px auto 0;
+  margin: 15px auto 50px;
   padding-left: 12px;
   padding-right: 12px;
   text-align: center;
@@ -12627,43 +12801,51 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
 .types-of-repair__serviceBlock {
   display: flex;
-  max-width: 956px;
-  padding-bottom: 11px;
-  padding-top: 11px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  padding-top: 12px;
   position: relative;
 }
 
-.types-of-repair__serviceBlock:not(:nth-last-of-type(1)) {
-  border-bottom: 1px solid #E5E9E9;
+.types-of-repair__serviceBlock::before {
+  background-color: #E4E4E8;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .types-of-repair__serviceBlockWrapTitle,
 .types-of-repair__serviceBlockWrapInfo {
+  align-items: center;
   display: flex;
 }
 
 .types-of-repair__serviceBlockWrapTitle {
-  padding-right: 15px;
-  width: calc(100% - 426px);
+  padding-right: 35px;
+  width: calc(100% - 360px);
 }
 
 .types-of-repair__serviceBlockWrapTitle img {
-  flex: 0 0 26px;
-  margin-left: 12px;
+  flex: 0 0 40px;
   margin-right: 19px;
-  width: 26px;
+  width: 40px;
 }
 
 .types-of-repair__serviceBlockWrapTitle h3 {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
   margin: 1px 0 -1px;
   text-align: left;
 }
 
 .types-of-repair__serviceBlockWrapInfo {
-  width: 415px;
+  width: 360px;
 }
 
 .types-of-repair__serviceBlockWrapInfo .price,
@@ -12672,40 +12854,42 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .types-of-repair__serviceBlockWrapInfo .price {
+  color: #000;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 28px;
   margin: 0;
   padding-right: 0;
   text-align: left;
-  flex: 0 0 129px;
-  width: 129px;
+  flex: 0 0 92px;
+  width: 92px;
 }
 
 .types-of-repair__serviceBlockWrapInfo p {
-  font-size: 20px;
-  line-height: 28px;
+  color: #777781;
+  font-size: 16px;
+  line-height: 24px;
   margin: 0;
   text-align: left;
-  flex: 0 0 173px;
-  width: 173px;
+  flex: 0 0 143px;
+  width: 143px;
 }
 
 .types-of-repair__serviceBlockWrapInfo a {
   align-items: center;
-  background-color: #FFC200;
-  border-radius: 12px;
-  color: inherit;
-  font-size: 20px;
+  background-color: #EC008C;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 24px;
   display: flex;
   justify-content: center;
   height: 48px;
   padding: 0 12px;
   text-align: center;
   flex: 0 0 125px;
-  width: 125px;
+  width: 115px;
 }
 
 .types-of-repair__serviceBlock.activation-top-line .this-line,
@@ -12792,20 +12976,31 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .types-of-repair__blocks {
-  padding-top: 65px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 47px;
 }
 
 .types-of-repair__block {
-  background-color: #FCF9F1;
-  border-radius: 16px;
+  background-color: #F0F0F3;
+  border-radius: 8px;
   display: flex;
-  margin-bottom: 15px;
-  padding: 13px 42px 15px 25px;
-}
+  padding: 20px;
+  width: 100%;
+  /*
+  &Icon {
+      height: 117px;
+      flex: 0 0 117px;
+      width: 117px;
 
-.types-of-repair__blockText {
-  padding-right: 25px;
-  width: calc(100% - 117px);
+      @include media-max-575 {
+          height: 60px;
+          flex: 0 0 60px;
+          width: 60px;
+      }
+  }
+  */
 }
 
 .types-of-repair__blockText h2 {
@@ -12815,19 +13010,14 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .types-of-repair__blockText p {
-  font-size: 16px;
-  line-height: 24px;
+  color: #777781;
+  font-size: 14px;
+  line-height: 20px;
   margin: 0;
 }
 
 .types-of-repair__blockText p:not(:last-child) {
-  margin-bottom: 7px;
-}
-
-.types-of-repair__blockIcon {
-  height: 117px;
-  flex: 0 0 117px;
-  width: 117px;
+  margin-bottom: 8px;
 }
 
 .types-of-repair__order-repairs-button {
@@ -12857,74 +13047,80 @@ body._touch .header .menu__list > li._active .menu__arrow {
   pointer-events: none;
 }
 
+.types-of-repair .block--faq {
+  max-width: 100%;
+}
+
 .repair-process {
   padding-top: 17px;
 }
 
 .repair-process__title {
-  font-size: 28px;
-  line-height: 34.66px;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 38px;
   margin: 0;
 }
 
 .repair-process__items {
   display: flex;
   flex-wrap: wrap;
-  margin: 26px -15px 0;
+  margin: 22px -15px 0;
 }
 
 .repair-process__item {
   margin-left: 15px;
   margin-right: 15px;
   width: calc(25% - 30px);
-}
+  /*
+  &:nth-child(3) {
 
-.repair-process__item:nth-child(3) .repair-process__number {
-  background: linear-gradient(187.4deg, #FFC200 0%, #FFFFFF 89.24%);
-  margin: 0;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+      .repair-process__number {
+          background: linear-gradient(187.4deg, #FFC200 0%, #FFFFFF 89.24%);
+          margin: 0;
+
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      }
+  }
+  */
 }
 
 .repair-process__number {
-  background: linear-gradient(187.4deg, #12E69A 0%, #FFFFFF 89.24%);
-  display: table;
-  font-size: 60px;
-  font-style: italic;
-  font-weight: 800;
-  line-height: 73.5px;
+  color: #EC008C;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 100%;
   margin: 0;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  padding-left: 10px;
 }
 
 .repair-process h3 {
   font-size: 20px;
+  font-weight: 800;
   line-height: 28px;
-  margin: 5px 0 0;
+  margin: 12px 0 0;
 }
 
 .repair-process__label {
-  background-color: #12E69A;
-  border-radius: 50px;
+  background-color: #ECFDF3;
+  border-radius: 4px;
+  color: #12B76A;
   display: table;
-  font-size: 12px;
-  font-style: italic;
-  font-weight: 700;
-  line-height: 14px;
-  letter-spacing: 0.02em;
-  margin: 2px 0 -2px;
-  padding: 3px 5px 2px;
-  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 7px 0 1px;
+  padding: 2px 5px 1px;
 }
 
 .repair-process__blockText {
-  padding-top: 12px;
+  padding-top: 8px;
 }
 
 .repair-process__blockText p {
-  font-size: 16px;
-  line-height: 24px;
+  color: #777781;
+  font-size: 14px;
+  line-height: 20px;
   margin: 0;
 }
 
@@ -12933,22 +13129,24 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .reviews__wrap-title h2 {
-  font-size: 28px;
-  line-height: 34.66px;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 38px;
   margin: 0;
 }
 
 .reviews__wrap-title a {
-  color: #0ED5FF;
-  font-size: 16px;
+  color: #EC008C;
+  font-size: 15px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 20px;
   margin-left: auto;
+  padding-left: 12px;
   text-align: right;
 }
 
 .reviews__slider {
-  margin-top: 19px;
+  margin-top: 24px;
   overflow: hidden;
 }
 
@@ -12957,10 +13155,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .reviews__review {
-  border: 1px solid #E5E9E9;
-  border-radius: 16px;
+  background-color: #F0F0F3;
+  border-radius: 8px;
   min-height: 100%;
-  padding: 16px 17px;
+  padding: 16px;
 }
 
 .reviews__reviewHeade {
@@ -12987,21 +13185,17 @@ body._touch .header .menu__list > li._active .menu__arrow {
   width: 100%;
 }
 
-.reviews__reviewBlockName {
-  padding-left: 11px;
-}
-
 .reviews__review h3 {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
-  margin: 0 0 2px;
+  margin: 0 0 -2px;
 }
 
 .reviews__review p {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  margin: 0;
+  color: #000;
+  font-size: 14px;
+  line-height: 20px;
+  margin: -1px 0 0;
 }
 
 .reviews .wrap-stars {
@@ -13010,46 +13204,50 @@ body._touch .header .menu__list > li._active .menu__arrow {
 }
 
 .reviews .swiper-pagination {
+  margin: 12px 0 0;
+  top: 0;
   position: relative;
 }
 
 .reviews .swiper-pagination .swiper-pagination-bullet {
-  background: #E5E9E9;
-  height: 8px;
-  margin: 34px 8px 0;
+  background-color: #E4E4E8;
+  border-radius: 8px;
+  height: 6px;
+  margin: 12px 4px;
   opacity: 1;
-  width: 8px;
+  width: 6px;
 }
 
 .reviews .swiper-pagination .swiper-pagination-bullet-active {
-  background: #FFC200;
+  background-color: #EC008C;
+  width: 16px;
 }
 
 .frequent-breakdowns {
-  padding-top: 51px;
+  padding-bottom: 34px;
+  padding-top: 22px;
 }
 
 .frequent-breakdowns h2 {
-  font-size: 28px;
-  line-height: 34.66px;
+  font-size: 32px;
+  line-height: 38px;
   margin: 0;
 }
 
 .frequent-breakdowns__elements {
   display: flex;
   flex-wrap: wrap;
-  margin: 15px -6px 0;
+  margin: 18px -6px 0;
 }
 
 .frequent-breakdowns__element {
-  background-color: #F2F4F4;
-  border-radius: 8px;
-  color: #66797C;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 20px;
+  background-color: #F0F0F3;
+  border-radius: 4px;
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
   margin: 6px;
-  padding: 6px 10px 5px 10px;
+  padding: 9px 16px;
 }
 
 .most-common-questions {
@@ -16163,15 +16361,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
     padding-left: 6px;
   }
 
-  .repair-of-apple-equipment__item:nth-child(3) img:nth-child(3) {
-    display: none;
-  }
-
-  .types-of-repair__item {
-    align-items: flex-start;
-    display: flex;
-  }
-
   .profile__formWrapFields .profile__formWrapField {
     width: 50%;
   }
@@ -16429,11 +16618,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
     display: none;
   }
 
-  .types-of-repair__serviceBlockWrapTitle,
-  .types-of-repair__serviceBlockWrapInfo {
-    align-items: center;
-  }
-
   .types-of-repair__serviceBlockWrapTitle img:nth-child(2) {
     display: none;
   }
@@ -16445,10 +16629,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .reviews__wrap-title {
     align-items: center;
     display: flex;
-  }
-
-  .reviews__wrap-title h2 {
-    padding-right: 15px;
   }
 
   .contact__item .block__content {
@@ -16908,6 +17088,12 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 }
 
+@media screen and (min-width: 761px) {
+  .types-of-repair__block {
+    width: calc(33.3333% - 11px);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .page-placing-an-order__head--items {
     align-items: center;
@@ -17034,10 +17220,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
     display: flex;
     flex-direction: column;
     width: 256px;
-  }
-
-  .model-repair #tabs .tabs__wrap-tab {
-    flex-wrap: wrap;
   }
 }
 
@@ -17180,6 +17362,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
     max-width: 605px;
   }
 
+  .repair-of-apple-equipment__wrap-form h2 {
+    display: none;
+  }
+
   .model-repair__items {
     display: flex;
     flex-wrap: wrap;
@@ -17206,11 +17392,11 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .types-of-repair .model-repair__sidebar {
     position: sticky;
-    top: 88px;
+    top: 110px;
   }
 
-  .types-of-repair__item {
-    flex-direction: column;
+  .types-of-repair__block {
+    width: 100%;
   }
 
   .contact__items {
@@ -17643,11 +17829,12 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .model-repair__item:nth-child(1) {
-    width: calc(100% - 316px - 60px);
+    padding-top: 26px;
+    width: calc(100% - 400px - 60px);
   }
 
   .model-repair__item:nth-child(2) {
-    width: 316px;
+    width: 400px;
   }
 
   .contact__itemsHead .column:nth-child(1) {
@@ -17720,10 +17907,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
     width: 155px;
   }
 
-  .types-of-repair__item {
-    flex-direction: row;
-  }
-
   .single-page__header .wrap-image {
     border-radius: 24px;
     height: 577px;
@@ -17775,12 +17958,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .types-of-repair__serviceBlockWrapInfo .price {
-    order: -1;
-  }
-}
-
 @media screen and (min-width: 1201px) {
   .catalog-menu-block .large-catalog-menu__item.sidebar-catalog-menu {
     width: 300px;
@@ -17792,6 +17969,10 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .product-comparison__item h1 {
     margin-bottom: 15px;
+  }
+
+  .types-of-repair__block {
+    width: calc(33.3333% - 11px);
   }
 
   .we-engrave-on__item:nth-child(2) {
@@ -17814,6 +17995,12 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .a-perfect-combination__items {
     margin: 21px -7px 35px;
+  }
+
+  .repair-of-apple-equipment__item {
+    height: 238px;
+    width: 238px;
+    max-width: 100%;
   }
 
   .types-of-repair__servicesHead .column:nth-child(1) {
@@ -17953,26 +18140,13 @@ body._touch .header .menu__list > li._active .menu__arrow {
     padding-top: 155px;
   }
 
+  .repair-of-apple-equipment__item {
+    padding-bottom: calc(32% - 5px);
+    width: calc(33.3333% - 11px);
+  }
+
   .types-of-repair__servicesHead .wrap-columns .column:nth-child(1) {
     width: 101px;
-  }
-
-  .types-of-repair__serviceBlockWrapTitle {
-    width: calc(100% - 380px);
-  }
-
-  .types-of-repair__serviceBlockWrapInfo {
-    width: 380px;
-  }
-
-  .types-of-repair__serviceBlockWrapInfo .price {
-    flex: 0 0 100px;
-    width: 100px;
-  }
-
-  .types-of-repair__serviceBlockWrapInfo p {
-    flex: 0 0 156px;
-    width: 156px;
   }
 
   .cooperation__itemOne h1 {
@@ -18032,12 +18206,14 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .types-of-repair__serviceBlockWrapTitle {
-    width: calc(100% - 140px);
+    padding-right: 0;
+    padding-top: 4px;
+    width: 100%;
   }
 
   .types-of-repair__serviceBlockWrapInfo {
-    display: block;
-    width: 140px;
+    padding-top: 10px;
+    width: 100%;
   }
 
   .types-of-repair__serviceBlockWrapInfo .price,
@@ -18046,12 +18222,15 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .types-of-repair__serviceBlockWrapInfo .price {
-    margin-bottom: 8px;
     margin-left: auto;
+    padding-right: 30px;
+    flex: 0 0 160px;
+    width: 160px;
   }
 
-  .types-of-repair__serviceBlockWrapInfo a {
-    margin-left: auto;
+  .types-of-repair__serviceBlockWrapInfo p {
+    margin-right: auto;
+    text-align: left;
   }
 
   .cooperation__itemOne h1 {
@@ -18207,10 +18386,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .a-perfect-combination .page-product__sec_title {
     padding-right: 35px;
-  }
-
-  .types-of-repair__itemBlockIcon {
-    margin-bottom: 12px;
   }
 
   .repair-process__item {
@@ -18471,11 +18646,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
     line-height: 30px;
   }
 
-  .repair-of-apple-equipment__item h4 {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
   .model-repair .exchange-trade-in__title {
     font-size: 36px;
     line-height: 44px;
@@ -18486,44 +18656,8 @@ body._touch .header .menu__list > li._active .menu__arrow {
     line-height: 30px;
   }
 
-  .model-repair #tabs .tabs__wrap-tab .tab {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .types-of-repair__item h3 {
-    font-size: 16px;
-    line-height: 20px;
-  }
-
-  .types-of-repair__serviceBlockWrapTitle h3 {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .types-of-repair__serviceBlockWrapInfo p {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .types-of-repair__serviceBlockWrapInfo a {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .repair-process__title {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  .reviews__wrap-title h2 {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  .frequent-breakdowns h2 {
-    font-size: 24px;
-    line-height: 30px;
+  .model-repair #tabs .tabs__item {
+    width: 100px;
   }
 
   .contact__itemsHead h1 {
@@ -19028,10 +19162,17 @@ body._touch .header .menu__list > li._active .menu__arrow {
     padding-left: 8px;
   }
 
+  .repair-of-apple-equipment__wrap-form {
+    padding-top: 16px;
+  }
+
   .model-repair__sidebar {
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+  }
+
+  .model-repair__sidebar .tab-form {
+    max-width: 100%;
+    width: 100%;
   }
 
   .types-of-repair .model-repair__item:nth-child(2) {
@@ -19047,7 +19188,9 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .types-of-repair__itemBlockIcon {
-    margin-right: 15px;
+    height: 32px;
+    flex: 0 0 32px;
+    width: 32px;
   }
 
   .types-of-repair__servicesHead {
@@ -19073,25 +19216,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
     border: none;
   }
 
-  .types-of-repair__serviceBlockWrapTitle {
-    width: calc(100% - 380px);
-  }
-
-  .types-of-repair__serviceBlockWrapInfo {
-    display: flex;
-    width: 380px;
-  }
-
-  .types-of-repair__serviceBlockWrapInfo .price {
-    order: -1;
-    flex: 0 0 80px;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-left: 0;
-    text-align: left;
-    width: 80px;
-  }
-
   .types-of-repair__serviceBlock .this-line {
     display: none;
   }
@@ -19099,6 +19223,12 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .repair-process__item {
     margin-bottom: 25px;
     width: calc(25% - 30px);
+  }
+
+  .reviews__slider {
+    margin: 24px -25px 0;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   .contact__itemsHead {
@@ -19509,9 +19639,9 @@ body._touch .header .menu__list > li._active .menu__arrow {
     padding-bottom: 80px;
   }
 
-  .repair-of-apple-equipment__item h4 {
-    font-size: 20px;
-    line-height: 24px;
+  .model-repair #tabs .tabs__item {
+    margin: 14px 6px;
+    width: calc(16.6666% - 12px);
   }
 
   .leave-data h2 {
@@ -19879,21 +20009,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
 
   .types-of-repair__servicesHead {
     display: none;
-  }
-
-  .types-of-repair__serviceBlockWrapTitle {
-    width: calc(100% - 140px);
-  }
-
-  .types-of-repair__serviceBlockWrapInfo {
-    display: block;
-    width: 140px;
-  }
-
-  .types-of-repair__serviceBlockWrapInfo .price {
-    margin-bottom: 8px;
-    margin-left: auto;
-    order: 0;
   }
 
   .cooperation__itemsTwo {
@@ -20283,11 +20398,11 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .model-repair #tabs .tabs__items {
-    width: calc(100% + 34px);
-  }
-
-  .model-repair #tabs .tabs__blockImage {
-    padding-bottom: 120%;
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-top: 25px;
+    width: calc(100% + 12px);
+    max-width: calc(100% + 12px);
   }
 
   .repair-process__item {
@@ -22890,6 +23005,19 @@ body._touch .header .menu__list > li._active .menu__arrow {
     display: none;
   }
 
+  .tab-form__wrap-custom-checkboxs {
+    padding-bottom: 13px;
+    padding-top: 13px;
+  }
+
+  .tab-form__wrap-custom-checkboxs .custom-checkbox {
+    padding: 6px 0 6px 35px;
+  }
+
+  .tab-form__wrap-custom-checkboxs .custom-checkbox__box {
+    margin-top: -2px;
+  }
+
   .after-report-sent.popup .popup__content {
     padding-bottom: 24px;
     padding-top: 56px;
@@ -22969,31 +23097,6 @@ body._touch .header .menu__list > li._active .menu__arrow {
     margin-top: 5px;
   }
 
-  .repair-of-apple-equipment__wrap-form-wrap-field-submit {
-    height: 48px;
-    margin-top: 9px;
-  }
-
-  .repair-of-apple-equipment__wrap-form-wrap-field-submit form {
-    padding: 3px;
-  }
-
-  .repair-of-apple-equipment__wrap-form-wrap-field-submit form input,
-  .repair-of-apple-equipment__wrap-form-wrap-field-submit form button {
-    font-size: 16px;
-    line-height: 24px;
-    height: 40px;
-  }
-
-  .repair-of-apple-equipment__wrap-form-wrap-field-submit form input {
-    width: calc(100% - 102px);
-  }
-
-  .repair-of-apple-equipment__wrap-form-wrap-field-submit form button {
-    border-radius: 10px;
-    width: 102px;
-  }
-
   .repair-of-apple-equipment__wrap-form-wrap-info {
     padding-left: 10px;
   }
@@ -23017,18 +23120,35 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .repair-of-apple-equipment__items {
-    margin: 14px auto -3px;
+    margin: 15px auto 6px;
   }
 
   .repair-of-apple-equipment__item h4 {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
-    top: 13%;
+    top: calc(12% - 2px);
   }
 
   .repair-of-apple-equipment__item img {
-    max-height: 76%;
+    max-height: 78%;
     max-width: 95%;
+  }
+
+  .model-repair__title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .model-repair__title-above-tabs {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 16px 0 0;
+  }
+
+  .model-repair .repair-of-apple-equipment__wrap-form {
+    margin-bottom: 6px;
+    padding-top: 34px;
   }
 
   .model-repair .exchange-trade-in__title {
@@ -23053,29 +23173,16 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .model-repair #tabs .tabs__items {
-    margin-bottom: 2px;
-    margin-top: 22px;
-  }
-
-  .model-repair #tabs .tabs__item {
-    margin-bottom: 25px;
-    width: calc(50% - 30px);
-  }
-
-  .model-repair #tabs .tabs__blockImage {
-    padding-bottom: 118%;
+    margin-top: -2px;
   }
 
   .model-repair__items {
-    padding-bottom: 79px;
+    margin-bottom: 32px;
+    margin-top: 1px;
   }
 
   .model-repair__sidebar {
     padding: 0;
-  }
-
-  .model-repair__sidebarBlock:not(:first-child) {
-    padding-top: 22px;
   }
 
   .model-repair__sidebarBlock .tab-form {
@@ -23086,15 +23193,12 @@ body._touch .header .menu__list > li._active .menu__arrow {
     padding-top: 11px;
   }
 
-  .model-repair__sidebarBlock .tab-form button {
-    height: 40px;
-    margin-top: 12px;
+  .model-repair .store-description {
+    padding-top: 19px;
   }
 
-  .model-repair__sidebarTitle {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 0;
+  .model-repair .store-description .n_container > h2 {
+    display: none;
   }
 
   .same-width-tab .tab {
@@ -23116,91 +23220,44 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .types-of-repair__items {
-    margin-top: 20px;
-  }
-
-  .types-of-repair__items {
-    margin: 13px -10px 20px;
+    margin: 20px 0 10px;
   }
 
   .types-of-repair__item {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: calc(33.3333% - 20px);
-  }
-
-  .types-of-repair__item:nth-child(2) {
-    display: flex;
-    justify-content: center;
-  }
-
-  .types-of-repair__item:nth-child(2) .types-of-repair__itemBlockIcon {
-    flex: 0 0 40px;
-    width: 40px;
-  }
-
-  .types-of-repair__item:nth-child(3) {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .types-of-repair__itemBlockIcon {
-    height: 40px;
-    flex: 0 0 36px;
-    margin-bottom: 10px;
-    width: 36px;
-  }
-
-  .types-of-repair__item h3 {
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  .types-of-repair__item-content {
-    max-width: 82px;
-  }
-
-  .types-of-repair__services {
-    margin-bottom: 12px;
-    margin-top: 16px;
-  }
-
-  .types-of-repair__servicesButton {
-    border-radius: 10px;
-    height: 40px;
-    font-size: 14px;
-    line-height: 20px;
-    margin: 1px 0 0 0;
+    margin: 4px 0;
     width: 100%;
   }
 
-  .types-of-repair__serviceBlock {
-    padding-bottom: 17px;
-  }
-
-  .types-of-repair__serviceBlockWrapTitle {
-    padding-right: 8px;
-    width: calc(100% - 102px);
-  }
-
-  .types-of-repair__serviceBlockWrapTitle img {
-    flex: 0 0 14px;
+  .types-of-repair__itemBlockIcon {
     height: 24px;
-    margin: 2px 12px 0 5px;
-    width: 14px;
+    flex: 0 0 24px;
+    width: 24px;
   }
 
-  .types-of-repair__serviceBlockWrapTitle img:nth-child(1) {
+  .types-of-repair__item h3 br {
     display: none;
   }
 
-  .types-of-repair__serviceBlockWrapTitle h3 {
-    font-size: 14px;
-    line-height: 20px;
+  .types-of-repair__services {
+    margin-bottom: 7px;
+    margin-top: 24px;
+  }
+
+  .types-of-repair__serviceBlock {
+    padding-bottom: 16px;
+  }
+
+  .types-of-repair__serviceBlock::before {
+    left: -15px;
+    width: calc(100% + 30px);
+  }
+
+  .types-of-repair__serviceBlockWrapTitle img {
+    margin-right: 16px;
   }
 
   .types-of-repair__serviceBlockWrapInfo {
-    width: 102px;
+    padding-top: 5px;
   }
 
   .types-of-repair__serviceBlockWrapInfo .price,
@@ -23210,9 +23267,11 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .types-of-repair__serviceBlockWrapInfo .price {
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 4px !important;
+    font-size: 18px;
+    line-height: 24px;
+    padding-right: 16px;
+    flex: 0 0 90px;
+    width: 90px;
   }
 
   .types-of-repair__serviceBlockWrapInfo .price .currency {
@@ -23224,126 +23283,65 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .types-of-repair__serviceBlockWrapInfo p {
-    font-size: 14px;
-    line-height: 20px;
-    flex: 0 0 102px;
-    margin-left: auto;
-    margin-bottom: 5px !important;
-    text-align: right;
-    width: 102px;
-  }
-
-  .types-of-repair__serviceBlockWrapInfo a {
-    font-size: 16px;
-    height: 40px;
-    line-height: 24px;
-    flex: 0 0 102px;
-    width: 102px;
+    flex: 0 0 90px;
+    width: 90px;
+    text-align: left;
   }
 
   .types-of-repair__blocks {
-    padding-top: 7px;
+    gap: 8px;
+    padding-top: 31px;
   }
 
   .types-of-repair__block {
-    padding: 12px;
-  }
-
-  .types-of-repair__blockText {
-    padding-right: 15px;
-    width: calc(100% - 60px);
+    padding: 16px;
   }
 
   .types-of-repair__blockText h2 {
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 3px;
+    line-height: 24px;
   }
 
-  .types-of-repair__blockText p {
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  .types-of-repair__blockText p:not(:last-child) {
-    margin-bottom: 4px;
-  }
-
-  .types-of-repair__blockIcon {
-    height: 60px;
-    flex: 0 0 60px;
-    width: 60px;
+  .types-of-repair .store-description h2 {
+    display: none;
   }
 
   .repair-process__title {
-    font-size: 20px;
-    line-height: 28px;
-    margin: -1px 0 18px;
-    text-align: center;
+    font-size: 26px;
+    line-height: 30px;
   }
 
   .repair-process__items {
-    margin: 16px -5px 0;
+    margin: 16px -8px 0;
   }
 
   .repair-process__item {
-    margin: 0 5px 17px;
-    width: calc(50% - 10px);
-  }
-
-  .repair-process__number {
-    font-size: 40px;
-    line-height: 49px;
+    margin: 0 8px 17px;
+    width: calc(50% - 16px);
   }
 
   .repair-process h3 {
-    font-size: 16px;
     line-height: 24px;
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: 3px;
-  }
-
-  .repair-process__label {
-    margin: 1px 0 3px;
-  }
-
-  .repair-process__blockText {
-    padding-top: 4px;
-  }
-
-  .repair-process__blockText p {
-    font-size: 12px;
-    line-height: 18px;
   }
 
   .reviews {
-    margin-top: 22px;
+    margin-top: 48px;
   }
 
   .reviews__wrap-title h2 {
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 10px;
-    text-align: center;
+    font-size: 26px;
+    line-height: 30px;
   }
 
   .reviews__wrap-title a {
     display: table;
-    font-size: 14px;
-    line-height: 20px;
-    margin: 9px auto 0;
-    text-align: center;
+    margin: 11px 0 0 0;
+    padding-left: 0;
   }
 
   .reviews__slider {
-    margin: 14px -15px 0;
+    margin: 11px -15px 0;
     padding-left: 15px;
     padding-right: 15px;
-  }
-
-  .reviews__review {
-    padding: 16px;
   }
 
   .reviews__reviewHeade {
@@ -23355,48 +23353,34 @@ body._touch .header .menu__list > li._active .menu__arrow {
     width: 40px;
   }
 
-  .reviews__reviewBlockName {
-    padding-left: 12px;
-  }
-
   .reviews__review h3 {
-    font-size: 14px;
-    line-height: 20px;
+    margin: 0 0 0;
   }
 
-  .reviews__review p {
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .reviews .swiper-pagination .swiper-pagination-bullet {
-    height: 6px;
-    margin-top: 21px;
-    width: 6px;
+  .reviews .swiper-pagination {
+    margin: 4px 0 0;
   }
 
   .frequent-breakdowns {
-    padding-top: 19px;
+    padding-bottom: 28px;
+    padding-top: 0;
   }
 
   .frequent-breakdowns h2 {
-    font-size: 20px;
-    line-height: 28px;
-    max-width: 207px;
-    margin: 0 auto 12px;
-    text-align: center;
+    font-size: 26px;
+    line-height: 30px;
   }
 
   .frequent-breakdowns__elements {
-    margin: 5px -4px 0;
+    margin: 12px -4px 0;
   }
 
   .frequent-breakdowns__element {
     border-radius: 6px;
-    font-size: 12px;
-    line-height: 14.86px;
+    font-size: 14px;
+    line-height: 20px;
     margin: 4px;
-    padding: 4px 6px 3px 6px;
+    padding: 8px 12px;
   }
 
   .most-common-questions {
@@ -24781,6 +24765,23 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 }
 
+@media screen and (max-width: 540.98px) {
+  .repair-of-apple-equipment__item {
+    padding-bottom: calc(48% - 2px);
+    width: calc(50% - 8px);
+  }
+
+  .model-repair #tabs .tabs__item {
+    margin: 14px 6px;
+    width: calc(25% - 12px);
+  }
+
+  .model-repair #tabs .tabs__item p {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
+
 @media screen and (max-width: 480.98px) {
   .popup__after-back-to {
     width: 100%;
@@ -24929,41 +24930,47 @@ body._touch .header .menu__list > li._active .menu__arrow {
     width: calc(33.3333% - 8px);
   }
 
-  .repair-of-apple-equipment__item {
-    border-radius: 12px;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-
-  .repair-of-apple-equipment__item:nth-child(1),
-  .repair-of-apple-equipment__item:nth-child(2) {
-    padding-bottom: 60.2%;
-    width: calc(50% - 10px);
-  }
-
-  .repair-of-apple-equipment__item:nth-child(3) {
-    padding-bottom: 55%;
-    margin-top: 10px;
-    width: 100%;
-  }
-
-  .repair-of-apple-equipment__item:nth-child(3) img:nth-child(2) {
+  .model-repair__text-under-title br {
     display: none;
   }
 
-  .repair-of-apple-equipment__item:nth-child(3) img:nth-child(3) {
-    display: block;
-    right: 50%;
-    transform: translateX(50%);
-  }
-
-  .repair-of-apple-equipment__item:nth-child(3) img {
-    width: 77%;
+  .types-of-repair__serviceBlockWrapTitle br {
+    display: none;
   }
 
   .types-of-repair .repair-of-apple-equipment__wrap-form {
     max-width: 100%;
     width: 100%;
+  }
+
+  .repair-process__items {
+    margin: 17px 0 0;
+  }
+
+  .repair-process__item {
+    margin: 0 0 16px;
+    padding: 0 0 0 74px;
+    position: relative;
+    width: 100%;
+  }
+
+  .repair-process__number {
+    left: 8px;
+    position: absolute;
+    top: -12px;
+  }
+
+  .repair-process .wrap-title {
+    align-items: center;
+    display: flex;
+  }
+
+  .repair-process h3 {
+    margin: 0;
+  }
+
+  .repair-process__label {
+    margin: 0 0 0 10px;
   }
 
   .payment-and-delivery .tabs__wrap-tab {
@@ -25090,12 +25097,32 @@ body._touch .header .menu__list > li._active .menu__arrow {
   #tabs .tabs__item {
     width: calc(33.3333% - 12px);
   }
+
+  .model-repair #tabs .tabs__item {
+    margin: 14px 6px;
+    width: calc(33.3333% - 12px);
+  }
 }
 
 @media screen and (max-width: 360.98px) {
   #tabs .no-sub-tabs-text {
     margin-top: 32px;
     width: 100%;
+  }
+
+  .types-of-repair__serviceBlockWrapInfo .price {
+    font-size: 16px;
+    line-height: 20px;
+    padding-right: 10px;
+    flex: 0 0 70px;
+    width: 70px;
+  }
+
+  .types-of-repair__serviceBlockWrapInfo p {
+    font-size: 14px;
+    line-height: 20px;
+    flex: 0 0 80px;
+    width: 80px;
   }
 }
 
@@ -25497,11 +25524,11 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .repair-of-apple-equipment__wrap-form-wrap-field-submit form button {
-    transition: 0.2s ease 0s;
+    transition: 0.3s ease 0s;
   }
 
   .repair-of-apple-equipment__wrap-form-wrap-field-submit form button:hover {
-    background-color: #FCD045;
+    background-color: #D0007B;
   }
 
   .repair-of-apple-equipment__item {
@@ -25509,27 +25536,25 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .repair-of-apple-equipment__item:hover {
-    background-color: #FFC200;
-  }
-
-  .repair-of-apple-equipment__item:hover img {
-    transform: translate(-4px, -4px) scale(1.03);
+    background-color: #E4E4E8;
   }
 
   .types-of-repair__servicesButton {
-    transition: 0.2s ease 0s;
+    transition: 0.3s ease 0s;
   }
 
   .types-of-repair__servicesButton:hover {
-    background-color: #0ed5ff;
+    background-color: #d0007b;
+    color: #fff;
   }
 
   .types-of-repair__serviceBlockWrapInfo a {
-    transition: 0.2s ease 0s;
+    transition: 0.3s ease 0s;
   }
 
   .types-of-repair__serviceBlockWrapInfo a:hover {
-    background-color: #0ed5ff;
+    background-color: #D0007B;
+    color: #fff !important;
   }
 
   .frequent-breakdowns__element {
@@ -25537,8 +25562,8 @@ body._touch .header .menu__list > li._active .menu__arrow {
   }
 
   .frequent-breakdowns__element:hover {
-    background-color: #0ed5ff;
-    color: #002024;
+    background-color: #E4E4E8;
+    color: #000 !important;
   }
 
   .popup-form__submit.order-repairs {
