@@ -4,10 +4,10 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261013103752">
-   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261013103752">
-   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261013103752">
-   <link rel="stylesheet" href="css/style.min.css?_v=20261013103752">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261013152733">
+   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261013152733">
+   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261013152733">
+   <link rel="stylesheet" href="css/style.min.css?_v=20261013152733">
    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
    <title>Види ремонту iPhone 17 Pro Max</title>
 </head>
@@ -3997,8 +3997,20 @@ document.addEventListener('click', (event) => {
                      <button type="submit">Відправити</button>
                   </form>
                </div>
-               <div class="popup__after">
-                  <h3>Очікуйте дзвінка нашого менеджера з продажу.</h3>
+               <div class="popup__after pt">
+                  <div class="after-report-sent--popup__content">
+                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#12B76A"/>
+                        <path d="M24 10.5L13 21.5L8 16.5" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+                     </svg>
+                     <h2>Звіт відправлений</h2>
+                     <p>Не зволікай, через 2 місяці твій телефон подешевшає на 2 499 ₴</p>
+                     <a href="" class="popup-link after-report-sent--popup__content-button close-popup">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M13.125 3.75024L6.875 10.0002L13.125 16.2502" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>Повернутись
+                     </a>
+                  </div>
                </div>
             </div>
          </div>
@@ -4006,19 +4018,21 @@ document.addEventListener('click', (event) => {
 
 	</div>
 
-	<script src="files/swiper/js/swiper-bundle.min.js?_v=20261013103752"></script>
-	<script src="files/swiper/js/swiper-init.js?_v=20261013103752"></script>
+	<script src="files/swiper/js/swiper-bundle.min.js?_v=20261013152733"></script>
+	<script src="files/swiper/js/swiper-init.js?_v=20261013152733"></script>
 
-	<script src="js/script.min.js?_v=20261013103752"></script>
+	<script src="js/script.min.js?_v=20261013152733"></script>
 
-	<script src="files/js/demo-script.js?_v=20261013103752"></script>
+	<script src="files/js/demo-script.js?_v=20261013152733"></script>
 
-	<script src="files/js/jquery-3.7.1.min.js?_v=20261013103752"></script>
-	<script src="files/js/plus-minus.js?_v=20261013103752"></script>
+	<script src="files/js/jquery-3.7.1.min.js?_v=20261013152733"></script>
+	<script src="files/js/plus-minus.js?_v=20261013152733"></script>
 
 	<script>
 
       document.addEventListener("DOMContentLoaded", function() {
+
+         // Button services
          const serviceOrderButtons = document.querySelectorAll('.types-of-repair__serviceBlock .popup-link[data-service-name]');
          const servicePopup = document.querySelector('#show-types-of-repair-order-repairs-popup');
 
@@ -4051,6 +4065,27 @@ document.addEventListener('click', (event) => {
                      }
                });
             });
+         }
+
+         // demo for form
+         if (servicePopup) {
+            const servicePopup = document.querySelector('#show-types-of-repair-order-repairs-popup');
+            if (servicePopup) {
+               const popupContent = servicePopup.querySelector('.popup__content');
+               const form = servicePopup.querySelector('.tab-form');
+
+               if (form && popupContent) {
+                  form.addEventListener('submit', function(event) {
+                     event.preventDefault();
+
+                     popupContent.classList.remove('before-active');
+
+                     setTimeout(() => {
+                        //popupContent.classList.add('before-active');
+                     }, 6000);
+                  });
+               }
+            }
          }
       });
 
