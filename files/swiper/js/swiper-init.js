@@ -716,7 +716,7 @@ if (relatedProducts) {
       effect: 'slide',
       breakpoints: {
          0: {
-            slidesPerView: 2.255,
+            slidesPerView: 1.79,
             spaceBetween: 10,
          },
          480: {
@@ -754,7 +754,7 @@ if (fromThisCategorySlider) {
       effect: 'slide',
       breakpoints: {
          0: {
-            slidesPerView: 1.21,
+            slidesPerView: 1.08,
             spaceBetween: 12,
          },
          481: {
