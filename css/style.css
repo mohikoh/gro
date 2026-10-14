@@ -16423,32 +16423,8 @@ body._touch .header .menu__list > li._active .menu__arrow {
   padding: 0;
 }
 
-.requirements-and-limitations__item .block__title._active {
-  color: #EC008C;
-}
-
-.requirements-and-limitations__item .block__title._active::after {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 5.50024L8 10.5002L13 5.50024' stroke='%23EC008C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
-  transform: translateY(-50%) scale(1, -1);
-}
-
 .requirements-and-limitations__item .block__title::before {
   display: none;
-}
-
-.requirements-and-limitations__item .block__title::after {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 5.50024L8 10.5002L13 5.50024' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  content: "";
-  height: 16px;
-  position: absolute;
-  right: 0;
-  transform: translateY(-50%);
-  top: 50%;
-  transition: 0.3s ease 0s;
-  width: 16px;
 }
 
 .requirements-and-limitations__item .block__text--content {
@@ -22432,6 +22408,30 @@ body._touch .header .menu__list > li._active .menu__arrow {
     padding: 6px 25px 5px 0;
   }
 
+  .requirements-and-limitations__item .block__title._active {
+    color: #EC008C;
+  }
+
+  .requirements-and-limitations__item .block__title._active::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 5.50024L8 10.5002L13 5.50024' stroke='%23EC008C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    transform: translateY(-50%) scale(1, -1);
+  }
+
+  .requirements-and-limitations__item .block__title::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 5.50024L8 10.5002L13 5.50024' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    content: "";
+    height: 16px;
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+    transition: 0.3s ease 0s;
+    width: 16px;
+  }
+
   .requirements-and-limitations__item .block__text--content {
     padding-bottom: 8px;
     padding-top: 5px;
@@ -25465,6 +25465,11 @@ body._touch .header .menu__list > li._active .menu__arrow {
   .prices-for-engraving {
     margin-bottom: 39px;
     margin-top: 48px;
+  }
+
+  .prices-for-engraving .types-of-repair__serviceBlock::before {
+    left: 0;
+    width: 100%;
   }
 
   .prices-for-engraving h2 {
