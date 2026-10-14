@@ -563,41 +563,43 @@ if (videosSlider) {
       // Угол срабатывания свайпа/перетаскивания
       touchAngle: 45,
       // Курсор перетаскивания
-      grabCursor: false, // true / false
+      //grabCursor: false, // true / false
 
       // Переключение при клике на слайд
       slideToClickedSlide: false,
       slidesPerView: 4,
       slidesPerGroup: 1,
       watchOverflow: true,
-      spaceBetween: 16,
-      speed: 500,
-            mousewheel: {
-               sensitivity: 1,
-               eventsTarget: ".videos-slider",
-            },
+      spaceBetween: 12,
+      speed: 800,
+      /*
+      mousewheel: {
+         sensitivity: 1,
+         eventsTarget: ".videos-slider",
+      },
+      */
       effect: 'slide',
       breakpoints: {
          0: {
-            slidesPerView: 2.45,
-            slidesPerGroup: 1,
-            spaceBetween: 8,
-         },
-         481: {
-            slidesPerView: 3.5,
-            slidesPerGroup: 1,
-            spaceBetween: 8,
-         },
-         684: {
-            slidesPerView: 3,
-            direction: 'vertical',
-            slidesPerGroup: 1,
-            autoHeight: true,
-         },
-         1025: {
             slidesPerView: 4,
             slidesPerGroup: 1,
-            direction: 'vertical',
+            spaceBetween: 8,
+         },
+         576: {
+            slidesPerView: 5,
+            slidesPerGroup: 1,
+            //spaceBetween: 8,
+         },
+         768: {
+            slidesPerView: 6,
+            slidesPerGroup: 1,
+            //spaceBetween: 8,
+         },
+         1025: {
+            slidesPerView: 9,
+            slidesPerGroup: 1,
+            //direction: 'vertical',
+            spaceBetween: 12,
          }
       },
    });
@@ -771,4 +773,32 @@ if (fromThisCategorySlider) {
          }
       },
    });
+}
+
+const faqSlider = document.querySelector('.faq-slider');
+if (faqSlider) {
+   let swiper = null;
+   const mediaQuery = window.matchMedia('(max-width: 575px)');
+
+   const toggleFaqSlider = () => {
+      if (mediaQuery.matches) {
+         if (!swiper) {
+            swiper = new Swiper(faqSlider, {
+               slidesPerView: 2.06,
+               slidesPerGroup: 1,
+               watchOverflow: true,
+               loop: false,
+               speed: 800,
+               spaceBetween: 8,
+               effect: 'slide',
+            });
+         }
+      } else if (swiper) {
+         swiper.destroy(true, true);
+         swiper = null;
+      }
+   };
+
+   toggleFaqSlider();
+   mediaQuery.addEventListener('change', toggleFaqSlider);
 }
