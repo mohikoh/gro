@@ -516,19 +516,19 @@ if (productComparisonSlider) {
          },
          661: {
             slidesPerView: 3,
-            spaceBetween: 16,
+            spaceBetween: 25,
          },
          801: {
             slidesPerView: 2,
-            spaceBetween: 16,
+            spaceBetween: 25,
          },
          900: {
             slidesPerView: 3,
-            spaceBetween: 16,
+            spaceBetween: 35,
          },
          1100: {
             slidesPerView: 4,
-            spaceBetween: 16,
+            spaceBetween: 35,
          }
       },
    });
