@@ -1,3 +1,18 @@
+const lazyImages = document.querySelectorAll('img[loading="lazy"]'); // Get all images with the loading="lazy" attribute
+function addLoadedClass(image) { // Function to add class to image parent after it is loaded
+   const parentElement = image.parentElement;
+   if (image.complete) { // Check if the image is loaded
+      parentElement.classList.add('loaded');
+   } else {
+      image.addEventListener('load', function() { // Add a load event to add the class after the image has loaded
+         parentElement.classList.add('loaded');
+      });
+   }
+}
+lazyImages.forEach(addLoadedClass); // Loop through all the images and call the addLoadedClass function for each one
+
+/* === */
+
 document.addEventListener("DOMContentLoaded", function() {
    let sliderForPhonesButtons = document.querySelectorAll('.slider-for-phones__button')
    sliderForPhonesButtons.forEach(sliderForPhonesButton => {
@@ -801,4 +816,44 @@ if (faqSlider) {
 
    toggleFaqSlider();
    mediaQuery.addEventListener('change', toggleFaqSlider);
+}
+
+const contactSectionSliders = document.querySelectorAll('.contact__section-slider');
+if (contactSectionSliders.length) {
+   contactSectionSliders.forEach(section => {
+      const thumbsSlider = section.querySelector('.mySwiper');
+      const mainSlider = section.querySelector('.mySwiper2');
+
+      if (!thumbsSlider || !mainSlider) return;
+
+      const mobileSlidesPerView = Number(section.dataset.thumbsMobile) || 5.9;
+
+      const swiperThumbs = new Swiper(thumbsSlider, {
+         spaceBetween: 4,
+         slidesPerView: 3.6,
+         freeMode: true,
+         watchSlidesProgress: true,
+         breakpoints: {
+            0: {
+               slidesPerView: mobileSlidesPerView,
+               spaceBetween: 8,
+            },
+            1025: {
+               slidesPerView: 8.6,
+               spaceBetween: 12,
+            }
+         },
+      });
+
+      new Swiper(mainSlider, {
+         effect: 'fade',
+         fadeEffect: {
+            crossFade: true
+         },
+         spaceBetween: 50,
+         thumbs: {
+            swiper: swiperThumbs,
+         },
+      });
+   });
 }
