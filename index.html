@@ -4,10 +4,10 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261015172611">
-   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261015172611">
-   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261015172611">
-   <link rel="stylesheet" href="css/style.min.css?_v=20261015172611">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261016013551">
+   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261016013551">
+   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261016013551">
+   <link rel="stylesheet" href="css/style.min.css?_v=20261016013551">
    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
    <title>Головна</title>
 </head>
@@ -3089,6 +3089,79 @@
             </div>
          </section>
       </main>
+
+      <div id="promo-popup" class="popup promo-popup">
+         <div class="popup__body">
+            <div class="popup__content before-active">
+               <a href="" class="popup__close close-popup">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M9 1L1 9M1 1L9 9" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+               </a>
+               <div class="popup__before">
+                  <div class="popup__wrap-head">
+                     <h3>Даруємо <span>250 ₴</span> за заповнення форми!</h3>
+                     <div class="wrap-icon">
+                        <img width="98" height="91" src="images/svg/popup-head-image.svg" alt="">
+                     </div>
+                  </div>
+                  <p class="desc">Підписуйтесь та отримуйте унікальні пропозиції, акційні добірки, знижки та інші бонуси.</p>
+                  <form action="#" class="popup-form">
+                     <label class="popup-form__label">Ваше ім’я</label>
+                     <input type="text" class="popup-form__field input" placeholder="Степан">
+                     <label class="popup-form__label">Email (необов'язково)</label>
+                     <input type="text" class="popup-form__field input" placeholder="example@gmail.com">
+                     <label class="popup-form__label">Телефон</label>
+                     <input type="text" class="popup-form__field input" placeholder="+38 066 348 77 88">
+                     <button type="submit" class="popup-form__submit">Підписатись</button><!-- blick-btn -->
+                     <label class="custom-checkbox">
+                        <input type="checkbox" class="custom-checkbox__input" checked>
+                        <span class="custom-checkbox__box"></span>
+                        <span class="custom-checkbox__text">
+                           Погоджуюсь на отримання листів та <a href="#">обробку персональних даних</a>. Ознайомлений <a href="#">з умовами використання сервісу</a>
+                        </span>
+                     </label>
+                  </form>
+               </div>
+               <div class="popup__after">
+                  <div class="popup__after-block-icon">
+                     <img src="images/svg/popup-after-block-icon.svg" alt="">
+                  </div>
+                  <h3 class="popup__after-title">Дякую за підписку</h3>
+                  <p class="popup__after-text">Ви успішно підписалися і тепер будете серед перших <br>які дізнаються про знижки та акції на нашому сайті.</p>
+                  <a href="" class="popup__after-back-to close-popup">
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.125 3.75024L6.875 10.0002L13.125 16.2502" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                     Повернутися до сайту
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script>
+         document.addEventListener('DOMContentLoaded', () => {
+            const popup = document.querySelector('#promo-popup');
+
+            if (!popup) return;
+
+            const storageKey = 'promoPopupLastShown';
+            const threeDays = 3 * 24 * 60 * 60 * 1000;
+            const lastShown = Number(localStorage.getItem(storageKey)) || 0;
+
+            if (Date.now() - lastShown < threeDays) return;
+
+            // Відкриваємо попап.
+            popup.classList.add('open');
+
+            // Блокуємо прокручування сторінки.
+            document.body.classList.add('lock');
+
+            // Запам'ятовуємо час показу.
+            localStorage.setItem(storageKey, Date.now().toString());
+         });
+      </script>
+
       <footer class="footer">
    <div class="n_container">
       <div data-spollers="575, max" data-one-spoller class="block footer__items">
@@ -4142,15 +4215,15 @@ document.addEventListener('click', (event) => {
 </script>
    </div>
 
-   <script src="js/script.min.js?_v=20261015172611"></script>
+   <script src="js/script.min.js?_v=20261016013551"></script>
 
-	<script src="files/js/demo-script.js?_v=20261015172611"></script>
+	<script src="files/js/demo-script.js?_v=20261016013551"></script>
 
-   <script src="files/swiper/js/swiper-bundle.min.js?_v=20261015172611"></script>
-   <script src="files/swiper/js/swiper-init.js?_v=20261015172611"></script>
+   <script src="files/swiper/js/swiper-bundle.min.js?_v=20261016013551"></script>
+   <script src="files/swiper/js/swiper-init.js?_v=20261016013551"></script>
 
-   <script src="files/js/jquery-3.7.1.min.js?_v=20261015172611"></script>
-   <script src="files/js/plus-minus.js?_v=20261015172611"></script>
+   <script src="files/js/jquery-3.7.1.min.js?_v=20261016013551"></script>
+   <script src="files/js/plus-minus.js?_v=20261016013551"></script>
 
 </body>
 </html>

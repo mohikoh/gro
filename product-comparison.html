@@ -4,10 +4,10 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261015172611">
-   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261015172611">
-   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261015172611">
-   <link rel="stylesheet" href="css/style.min.css?_v=20261015172611">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261016013551">
+   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261016013551">
+   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261016013551">
+   <link rel="stylesheet" href="css/style.min.css?_v=20261016013551">
    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
    <title>Порівняння товарів</title>
 </head>
@@ -2393,103 +2393,81 @@
 					<h1>Порівняння товарів</h1>
 					<div class="product-comparison__items">
 						<div class="product-comparison__item">
-							<div class="product-comparison__wrap-selected slider-display-delay display-delay">
-								<p><span id="compared"></span> одиниці</p>
+
+							<div class="product-comparison__left-head js-product-comparison-head">
+								<h5>Показувати</h5>
+								<div class="catalog-page__wrapSelect default-custom-select js-linked-to-visual-appearance">
+									<select>
+										<option value="" selected>Смартфони</option>
+										<option value="">Айфони</option>
+										<option value="">Планшети</option>
+									</select>
+								</div>
+								<div class="product-comparison__wrap-selected slider-display-delay display-delay">
+									<p><span id="compared"></span> одиниці</p>
+									<button id="clear-list-product-comparison" type="button" class="product-comparison__clear-list slider-display-delay display-delay">
+										<span>Очистити все</span>
+										<span>Очистити</span>
+									</button>
+								</div>
+								<div class="product-comparison__checkboxs custom-radio slider-display-delay display-delay">
+									<label class="custom-checkbox">
+										<input type="radio" name="comparison-parameters" class="custom-checkbox__input" checked>
+										<span class="custom-checkbox__box"></span>
+										<span class="custom-checkbox__text">Всі характеристики</span>
+									</label>
+									<label class="custom-checkbox">
+										<input type="radio" name="comparison-parameters" class="custom-checkbox__input">
+										<span class="custom-checkbox__box"></span>
+										<span class="custom-checkbox__text">Тільки ті, що відрізняються</span>
+									</label>
+								</div>
 							</div>
-							<div class="product-comparison__checkboxs custom-radio slider-display-delay display-delay">
-								<label class="custom-checkbox">
-									<input type="radio" name="comparison-parameters" class="custom-checkbox__input" checked>
-									<span class="custom-checkbox__box"></span>
-									<span class="custom-checkbox__text">Всі характеристики</span>
-								</label>
-								<label class="custom-checkbox">
-									<input type="radio" name="comparison-parameters" class="custom-checkbox__input">
-									<span class="custom-checkbox__box"></span>
-									<span class="custom-checkbox__text">Тільки ті, що відрізняються</span>
-								</label>
+							<div class="product-comparison__lists">
+
+								<ul class="product-comparison__list js-product-comparison-list slider-display-delay display-delay" data-group="display">
+									<li>
+										<button type="button" class="comparison-group__toggle" aria-expanded="true">Дисплей</button>
+									</li>
+									<li>
+										<p class="product-comparison__slideName">Діагональ екрана</p>
+									</li>
+									<li>
+										<p class="product-comparison__slideName">Тип дисплея</p>
+									</li>
+									<li>
+										<p class="product-comparison__slideName">Роздільна здатність</p>
+									</li>
+								</ul>
+
+								<ul class="product-comparison__list js-product-comparison-list slider-display-delay display-delay" data-group="performance">
+									<li>
+										<button type="button" class="comparison-group__toggle" aria-expanded="true">Продуктивність</button>
+									</li>
+									<li>
+										<p class="product-comparison__slideName">Процесор</p>
+									</li>
+									<li>
+										<p class="product-comparison__slideName">Графічний процесор</p>
+									</li>
+									<li>
+										<p class="product-comparison__slideName">Оперативна пам'ять</p>
+									</li>
+								</ul>
+
+								<ul class="product-comparison__list js-product-comparison-list slider-display-delay display-delay" data-group="camera">
+									<li>
+										<button type="button" class="comparison-group__toggle" aria-expanded="true">Камера</button>
+									</li>
+									<li>
+										<p class="product-comparison__slideName">Основна камера</p>
+									</li>
+									<li>
+										<p class="product-comparison__slideName">Фронтальна камера</p>
+									</li>
+								</ul>
+
 							</div>
-							<button id="clear-list-product-comparison" data-da="product-comparison__wrap-selected, last, 800" type="button" class="product-comparison__clear-list slider-display-delay display-delay">Очистити список</button>
-							<ul class="product-comparison__list js-product-comparison-list slider-display-delay display-delay">
-								
-								<!-- Дисплей -->
-								<li class="comparison-group" data-group="display">
-									<button type="button" class="comparison-group__toggle" aria-expanded="true">Дисплей</button>
-								</li>
-
-								<li data-group="display">
-									<p class="product-comparison__slideName">Діагональ екрана</p>
-								</li>
-								<li data-group="display">
-									<p class="product-comparison__slideName">Тип дисплея</p>
-								</li>
-								<li data-group="display">
-									<p class="product-comparison__slideName">Роздільна здатність</p>
-								</li>
-
-								<!-- Продуктивність -->
-								<li class="comparison-group" data-group="performance">
-									<button type="button" class="comparison-group__toggle" aria-expanded="true">Продуктивність</button>
-								</li>
-
-								<li data-group="performance">
-									<p class="product-comparison__slideName">Процесор</p>
-								</li>
-								<li data-group="performance">
-									<p class="product-comparison__slideName">Графічний процесор</p>
-								</li>
-								<li data-group="performance">
-									<p class="product-comparison__slideName">Оперативна пам'ять</p>
-								</li>
-
-								<!-- Камера -->
-								<li class="comparison-group" data-group="camera">
-									<button type="button" class="comparison-group__toggle" aria-expanded="true">Камера</button>
-								</li>
-
-								<li data-group="camera">
-									<p class="product-comparison__slideName">Основна камера</p>
-								</li>
-								<li data-group="camera">
-									<p class="product-comparison__slideName">Фронтальна камера</p>
-								</li>
-
-								<!--
-								<li data-list="producer">
-									<h4 class="product-comparison__slideName">Виробник</h4>
-								</li>
-								<li data-list="product-type">
-									<h4 class="product-comparison__slideName">Тип товару</h4>
-								</li>
-								<li data-list="guarantee">
-									<h4 class="product-comparison__slideName">Гарантія</h4>
-								</li>
-								<li data-list="state">
-									<h4 class="product-comparison__slideName">Стан</h4>
-								</li>
-								<li data-list="line">
-									<h4 class="product-comparison__slideName">Лінійка</h4>
-								</li>
-								<li data-list="amount-of-memory">
-									<h4 class="product-comparison__slideName">Об'єм пам'яті</h4>
-								</li>
-								<li data-list="main-camera">
-									<h4 class="product-comparison__slideName">Основна камера, Мп</h4>
-								</li>
-								<li data-list="diagonal">
-									<h4 class="product-comparison__slideName">Діагональ, дюйми</h4>
-								</li>
-								<li data-list="communication">
-									<h4 class="product-comparison__slideName">Cтандарт зв'язку</h4>
-								</li>
-								<li data-list="ram">
-									<h4 class="product-comparison__slideName">Оперативна пам'яті</h4>
-								</li>
-								<li data-list="resolution">
-									<h4 class="product-comparison__slideName">Роздільна здатність</h4>
-								</li>
-								-->
-
-							</ul>
 						</div>
 						<div class="product-comparison__item">
 							<div class="product-comparison__wrap-slider slider-display-delay display-delay">
@@ -2513,219 +2491,279 @@
                         </div>
 								<div class="product-comparison__slider swiper-conteiner">
 									<div class="swiper-wrapper">
+
 										<div class="swiper-slide product-comparison__slide">
 											<button class="product-comparison__buttonRemove" type="button">
 												<img src="images/svg/product-comparison-button-remove-icon.svg" alt="">
 											</button>
-                                 <div class="product-comparison__wrap-head">
-                                    <div class="product-comparison__sliderBlockImage wrap-lazy-load-image">
-                                       <p class="slider-for-phones__blockImageLabel good-price">Вигідна ціна</p>
-                                       <img src="images/slide-product-1.png" alt="">
-                                       <a href="#" class="plus">
-                                          Додати в кошик
-                                          <img src="images/svg/plus-for-product-mobile.svg" alt="">
-                                       </a>
-                                    </div>
-                                    <div class="product-comparison__sliderBlockInfo">
-                                       <p>58 199 <span class="currency icon">₴</span><span class="currency letters">грн.</span></p>
-                                       <h4><a href="product.html">iPhone 13 128GB Midnight (MLPF3)</a></h4>
-                                       <div class="wrap-in-stock">
-                                          <p class="page-product__status in-stock">В наявності</p> <!-- В наявності - in-stock, Немає в наявності - no-in-stock, Передзамовлення - pre-order -->
-                                          <p>Забрати сьогодні</p>
-                                       </div>
-                                    </div>
+                                 <div class="product-comparison__wrap-head js-product-comparison-head">
+                                    <div class="slider-for-phones__blockImage">
+													<img class="slider-for-phones__image" src="images/catalog-product-1.png" alt="">
+													<a href="#" class="plus"><!-- blick-btn -->
+														Додати в кошик
+														<img src="images/svg/plus-for-product-mobile.svg" alt="">
+													</a>
+												</div>
+												<div class="slider-for-phones__content">
+													<div class="slider-for-phones__wrap-price">
+														<p>36 780 ₴</p>
+													</div>
+													<h3><a href="product.html">Смартфон Apple iPhone 16e 128GB eSIM Red (MD0K2)</a></h3>
+													<div class="slider-for-phones__obviousness">
+														<p class="made-to-order">Під замовлення</p>
+													</div>
+												</div>
                                  </div>
-											<ul class="product-comparison__list js-product-comparison-list">
-
-												<li class="comparison-group" data-group="display">Дисплей</li>
-												<li data-group="display">7.6″</li>
-												<li data-group="display">LTPO OLED</li>
-												<li data-group="display">1878 х 2670</li>
-
-												<li class="comparison-group" data-group="performance">Продуктивність</li>
-												<li data-group="performance">A20 Pro</li>
-												<li data-group="performance">7-core GPU</li>
-												<li data-group="performance">12 ГБ</li>
-
-												<li class="comparison-group" data-group="camera">Камера</li>
-												<li data-group="camera">48 МП</li>
-												<li data-group="camera">12 МП</li>
-												
-												<!--
-												<li data-list="producer">Apple</li>
-												<li data-list="product-type">Смартфон</li>
-												<li data-list="guarantee">12 місяців</li>
-												<li data-list="state">Новий</li>
-												<li data-list="line">iPhone 15 Pro Max</li>
-												<li data-list="amount-of-memory">256 ГБ</li>
-												<li data-list="main-camera">48 (f/1.78, широкоугольная) + 12 (f/2.2, 120 градусов, сверхширокоугольная) + 12 (f/2.8, 5х кратный телеобъектив)</li>
-												<li data-list="diagonal">6,7</li>
-												<li data-list="communication">5G, 4G, 3G</li>
-												<li data-list="ram">2 ГБ</li>
-												<li data-list="resolution">2796x1290</li>
-												-->
-
+											<ul class="product-comparison__list js-product-comparison-list" data-group="display">
+												<li></li>
+												<li>
+													<span class="name">Дисплей</span>
+													7.6″
+												</li>
+												<li>
+													<span class="name">Дисплей</span>
+													LTPO OLED
+												</li>
+												<li>
+													<span class="name">Дисплей</span>
+													1878 х 2670
+												</li>
+											</ul>
+											<ul class="product-comparison__list js-product-comparison-list" data-group="performance">
+												<li></li>
+												<li>
+													<span class="name">Продуктивність</span>
+													A20 Pro
+												</li>
+												<li>
+													<span class="name">Продуктивність</span>
+													7-core GPU
+												</li>
+												<li>
+													<span class="name">Продуктивність</span>
+													12 ГБ
+												</li>
+											</ul>
+											<ul class="product-comparison__list js-product-comparison-list" data-group="camera">
+												<li></li>
+												<li>
+													<span class="name">Камера</span>
+													48 МП
+												</li>
+												<li>
+													<span class="name">Камера</span>
+													12 МП
+												</li>
 											</ul>
 										</div>
+
 										<div class="swiper-slide product-comparison__slide">
 											<button class="product-comparison__buttonRemove" type="button">
 												<img src="images/svg/product-comparison-button-remove-icon.svg" alt="">
 											</button>
-                                 <div class="product-comparison__wrap-head">
-                                    <div class="product-comparison__sliderBlockImage wrap-lazy-load-image">
-                                       <p class="slider-for-phones__blockImageLabel boo">Б/У</p>
-                                       <img src="images/slide-product-11.png" alt="">
-                                       <a href="#" class="plus">
-                                          Додати в кошик
-                                          <img src="images/svg/plus-for-product-mobile.svg" alt="">
-                                       </a>
-                                    </div>
-                                    <div class="product-comparison__sliderBlockInfo">
-                                       <p>58 199 <span class="currency icon">₴</span><span class="currency letters">грн.</span></p>
-                                       <h4><a href="product.html">iPhone 13 128GB Midnight (MLPF3)</a></h4>
-                                       <div class="wrap-in-stock">
-                                          <p class="page-product__status in-stock">В наявності</p> <!-- В наявності - in-stock, Немає в наявності - no-in-stock, Передзамовлення - pre-order -->
-                                       </div>
-                                    </div>
+                                 <div class="product-comparison__wrap-head js-product-comparison-head">
+                                    <div class="slider-for-phones__blockImage">
+													<img class="slider-for-phones__image" src="images/catalog-product-2.png" alt="">
+													<a href="#" class="plus"><!-- blick-btn -->
+														Додати в кошик
+														<img src="images/svg/plus-for-product-mobile.svg" alt="">
+													</a>
+												</div>
+												<div class="slider-for-phones__content">
+													<div class="slider-for-phones__wrap-price">
+														<p>
+															<span class="price">18 270 ₴</span>
+															<span class="wrap-discount">
+																<span>31 399 ₴</span>
+															</span>
+															<span class="slider-for-phones__discountLabel">-890 ₴</span>
+														</p>
+													</div>
+													<h3><a href="product.html">Смартфон Apple iPhone 16e 128GB eSIM Red (MD0K2)</a></h3>
+													<div class="slider-for-phones__obviousness">
+														<p class="pick-up-today">Забрати сьогодні</p>
+													</div>
+												</div>
 											</div>
-											<ul class="product-comparison__list js-product-comparison-list">
-												
-												<li class="comparison-group" data-group="display">Дисплей</li>
-												<li data-group="display">7.6″</li>
-												<li data-group="display">LTPO OLED</li>
-												<li data-group="display">1878 х 2670</li>
+											<ul class="product-comparison__list js-product-comparison-list" data-group="display">
+												<li></li>
+												<li>
+													<span class="name">Дисплей</span>
+													5.4″
+												</li>
+												<li>
+													<span class="name">Дисплей</span>
+													OLED
+												</li>
+												<li>
+													<span class="name">Дисплей</span>
+													2878 х 2670
+												</li>
+											</ul>
+											<ul class="product-comparison__list js-product-comparison-list" data-group="performance">
+												<li></li>
+												<li>
+													<span class="name">Продуктивність</span>
+													A24 Pro
+												</li>
+												<li>
+													<span class="name">Продуктивність</span>
+													5-core GPU
+												</li>
+												<li>
+													<span class="name">Продуктивність</span>
+													8 ГБ
+												</li>
+											</ul>
 
-												<li class="comparison-group" data-group="performance">Продуктивність</li>
-												<li data-group="performance">A20 Pro</li>
-												<li data-group="performance">7-core GPU</li>
-												<li data-group="performance">12 ГБ</li>
-
-												<li class="comparison-group" data-group="camera">Камера</li>
-												<li data-group="camera">48 МП</li>
-												<li data-group="camera">12 МП</li>
-
-												<!--
-												<li data-list="producer">Apple</li>
-												<li data-list="product-type">Смартфон</li>
-												<li data-list="guarantee">12 місяців</li>
-												<li data-list="state">Новий</li>
-												<li data-list="line">iPhone 15</li>
-												<li data-list="amount-of-memory">128 ГБ</li>
-												<li data-list="main-camera">48 (f/1.6, широкоугольная) + 12 (f/2.4, 120 градусов, сверхширокоугольная)</li>
-												<li data-list="diagonal">6,1</li>
-												<li data-list="communication">5G, 4G, 3G</li>
-												<li data-list="ram">3 ГБ</li>
-												<li data-list="resolution">2796x1290</li>
-												-->
-
+											<ul class="product-comparison__list js-product-comparison-list" data-group="camera">
+												<li></li>
+												<li>
+													<span class="name">Камера</span>
+													60 МП
+												</li>
+												<li>
+													<span class="name">Камера</span>
+													32 МП
+												</li>
 											</ul>
 										</div>
-
-										<!--
+										
 										<div class="swiper-slide product-comparison__slide">
 											<button class="product-comparison__buttonRemove" type="button">
 												<img src="images/svg/product-comparison-button-remove-icon.svg" alt="">
 											</button>
-                                 <div class="product-comparison__wrap-head">
-                                    <div class="product-comparison__sliderBlockImage wrap-lazy-load-image">
-                                       <img src="images/slide-product-12.png" alt="">
-                                       <a href="#" class="plus">
-                                          Додати в кошик
-                                          <img src="images/svg/plus-for-product-mobile.svg" alt="">
-                                       </a>
-                                    </div>
-                                    <div class="product-comparison__sliderBlockInfo">
-                                       <p>58 199 <span class="currency icon">₴</span><span class="currency letters">грн.</span></p>
-                                       <h4><a href="product.html">iPhone 13</a></h4>
-                                       <div class="wrap-in-stock">
-                                          <p class="page-product__status in-stock">В наявності</p>
-                                          <p>Забрати сьогодні</p>
-                                       </div>
-                                    </div>
+                                 <div class="product-comparison__wrap-head js-product-comparison-head">
+                                    <div class="slider-for-phones__blockImage">
+													<img class="slider-for-phones__image" src="images/catalog-product-3.png" alt="">
+													<a href="#" class="plus"><!-- blick-btn -->
+														Додати в кошик
+														<img src="images/svg/plus-for-product-mobile.svg" alt="">
+													</a>
+												</div>
+												<div class="slider-for-phones__content">
+													<div class="slider-for-phones__wrap-price">
+														<p>36 780 ₴</p>
+													</div>
+													<h3><a href="product.html">Смартфон Apple iPhone 16e 128GB eSIM Red (MD0K2)</a></h3>
+													<div class="slider-for-phones__obviousness">
+														<p class="made-to-order">Під замовлення</p>
+													</div>
+												</div>
 											</div>
-											<ul class="product-comparison__list js-product-comparison-list">
-												<li data-list="producer">Apple</li>
-												<li data-list="product-type">Смартфон</li>
-												<li data-list="guarantee">12 місяців</li>
-												<li data-list="state">Новий</li>
-												<li data-list="line">iPhone 15</li>
-												<li data-list="amount-of-memory">128 ГБ</li>
-												<li data-list="main-camera">48 (f/1.6, широкоугольная) + 12 (f/2.4, 120 градусов, сверхширокоугольная)</li>
-												<li data-list="diagonal">6,1</li>
-												<li data-list="communication">5G, 4G, 3G</li>
-												<li data-list="ram">4 ГБ</li>
-												<li data-list="resolution">2796x1290</li>
+											<ul class="product-comparison__list js-product-comparison-list" data-group="display">
+												<li></li>
+												<li>
+													<span class="name">Дисплей</span>
+													5.4″
+												</li>
+												<li>
+													<span class="name">Дисплей</span>
+													OLED
+												</li>
+												<li>
+													<span class="name">Дисплей</span>
+													2878 х 2670
+												</li>
+											</ul>
+											<ul class="product-comparison__list js-product-comparison-list" data-group="performance">
+												<li></li>
+												<li>
+													<span class="name">Продуктивність</span>
+													A24 Pro
+												</li>
+												<li>
+													<span class="name">Продуктивність</span>
+													5-core GPU
+												</li>
+												<li>
+													<span class="name">Продуктивність</span>
+													8 ГБ
+												</li>
+											</ul>
+											<ul class="product-comparison__list js-product-comparison-list" data-group="camera">
+												<li></li>
+												<li>
+													<span class="name">Камера</span>
+													60 МП
+												</li>
+												<li>
+													<span class="name">Камера</span>
+													32 МП
+												</li>
 											</ul>
 										</div>
+
 										<div class="swiper-slide product-comparison__slide">
 											<button class="product-comparison__buttonRemove" type="button">
 												<img src="images/svg/product-comparison-button-remove-icon.svg" alt="">
 											</button>
-                                 <div class="product-comparison__wrap-head">
-                                    <div class="product-comparison__sliderBlockImage wrap-lazy-load-image">
-                                       <img src="images/slider-catalog-9.png" alt="">
-                                       <a href="#" class="plus">
-                                          Додати в кошик
-                                          <img src="images/svg/plus-for-product-mobile.svg" alt="">
-                                       </a>
-                                    </div>
-                                    <div class="product-comparison__sliderBlockInfo">
-                                       <p>58 199 <span class="currency icon">₴</span><span class="currency letters">грн.</span></p>
-                                       <h4><a href="product.html">iPhone 13 128GB Midnight 13 128GB Midnight iPhone 13 128GB Midnight 13 128GB Midnight</a></h4>
-                                       <div class="wrap-in-stock">
-                                          <p class="page-product__status in-stock">В наявності</p>
-                                       </div>
-                                    </div>
+                                 <div class="product-comparison__wrap-head js-product-comparison-head">
+                                    <div class="slider-for-phones__blockImage">
+													<img class="slider-for-phones__image" src="images/catalog-product-2.png" alt="">
+													<a href="#" class="plus"><!-- blick-btn -->
+														Додати в кошик
+														<img src="images/svg/plus-for-product-mobile.svg" alt="">
+													</a>
+												</div>
+												<div class="slider-for-phones__content">
+													<div class="slider-for-phones__wrap-price">
+														<p>
+															<span class="price">18 270 ₴</span>
+															<span class="wrap-discount">
+																<span>31 399 ₴</span>
+															</span>
+															<span class="slider-for-phones__discountLabel">-890 ₴</span>
+														</p>
+													</div>
+													<h3><a href="product.html">Смартфон Apple iPhone 16e 128GB eSIM Red (MD0K2)</a></h3>
+													<div class="slider-for-phones__obviousness">
+														<p class="pick-up-today">Забрати сьогодні</p>
+													</div>
+												</div>
 											</div>
-											<ul class="product-comparison__list js-product-comparison-list">
-												<li data-list="producer">Apple</li>
-												<li data-list="product-type">Смартфон</li>
-												<li data-list="guarantee">12 місяців</li>
-												<li data-list="state">Новий</li>
-												<li data-list="line">iPhone 15</li>
-												<li data-list="amount-of-memory">128 ГБ</li>
-												<li data-list="main-camera">48 (f/1.78, широкоугольная) + 12 (f/2.2, 120 градусов, сверхширокоугольная) + 12 (f/2.8, 5х кратный телеобъектив)</li>
-												<li data-list="diagonal">6,1</li>
-												<li data-list="communication">5G, 4G, 3G</li>
-												<li data-list="ram">1 ГБ</li>
-												<li data-list="resolution">2796x1290</li>
+											<ul class="product-comparison__list js-product-comparison-list" data-group="display">
+												<li></li>
+												<li>
+													<span class="name">Дисплей</span>
+													5.4″
+												</li>
+												<li>
+													<span class="name">Дисплей</span>
+													OLED
+												</li>
+												<li>
+													<span class="name">Дисплей</span>
+													2878 х 2670
+												</li>
+											</ul>
+											<ul class="product-comparison__list js-product-comparison-list" data-group="performance">
+												<li></li>
+												<li>
+													<span class="name">Продуктивність</span>
+													A24 Pro
+												</li>
+												<li>
+													<span class="name">Продуктивність</span>
+													5-core GPU
+												</li>
+												<li>
+													<span class="name">Продуктивність</span>
+													8 ГБ
+												</li>
+											</ul>
+											<ul class="product-comparison__list js-product-comparison-list" data-group="camera">
+												<li></li>
+												<li>
+													<span class="name">Камера</span>
+													60 МП
+												</li>
+												<li>
+													<span class="name">Камера</span>
+													32 МП
+												</li>
 											</ul>
 										</div>
-										<div class="swiper-slide product-comparison__slide">
-											<button class="product-comparison__buttonRemove" type="button">
-												<img src="images/svg/product-comparison-button-remove-icon.svg" alt="">
-											</button>
-                                 <div class="product-comparison__wrap-head">
-                                    <div class="product-comparison__sliderBlockImage wrap-lazy-load-image">
-                                       <img src="images/slider-catalog-9.png" alt="">
-                                       <a href="#" class="plus">
-                                          Додати в кошик
-                                          <img src="images/svg/plus-for-product-mobile.svg" alt="">
-                                       </a>
-                                    </div>
-                                    <div class="product-comparison__sliderBlockInfo">
-                                       <p>58 199 <span class="currency icon">₴</span><span class="currency letters">грн.</span></p>
-                                       <h4><a href="product.html">iPhone 13 128GB Midnight 13 128GB Midnight iPhone 13 128GB Midnight 13 128GB Midnight</a></h4>
-                                       <div class="wrap-in-stock">
-                                          <p class="page-product__status in-stock">В наявності</p>
-                                       </div>
-                                    </div>
-											</div>
-											<ul class="product-comparison__list js-product-comparison-list">
-												<li data-list="producer">Apple</li>
-												<li data-list="product-type">Смартфон</li>
-												<li data-list="guarantee">12 місяців</li>
-												<li data-list="state">Новий</li>
-												<li data-list="line">iPhone 15</li>
-												<li data-list="amount-of-memory">128 ГБ</li>
-												<li data-list="main-camera">48 (f/1.6, широкоугольная) + 12 (f/2.4, 120 градусов, сверхширокоугольная)</li>
-												<li data-list="diagonal">6,1</li>
-												<li data-list="communication">5G, 4G, 3G</li>
-												<li data-list="ram">3 ГБ</li>
-												<li data-list="resolution">2796x1290</li>
-											</ul>
-										</div>
-										-->
 
 									</div>
 								</div>
@@ -3788,17 +3826,221 @@ document.addEventListener('click', (event) => {
 </script>
 	</div>
 
-	<script src="files/swiper/js/swiper-bundle.min.js?_v=20261015172611"></script>
-	<script src="files/swiper/js/swiper-init.js?_v=20261015172611"></script>
+	<script src="files/swiper/js/swiper-bundle.min.js?_v=20261016013551"></script>
+	<script src="files/swiper/js/swiper-init.js?_v=20261016013551"></script>
 
-	<script src="js/script.min.js?_v=20261015172611"></script>
+	<script src="js/script.min.js?_v=20261016013551"></script>
 
-	<script src="files/js/demo-script.js?_v=20261015172611"></script>
+	<script src="files/js/demo-script.js?_v=20261016013551"></script>
 
-	<script src="files/js/jquery-3.7.1.min.js?_v=20261015172611"></script>
-	<script src="files/js/plus-minus.js?_v=20261015172611"></script>
+	<script src="files/js/jquery-3.7.1.min.js?_v=20261016013551"></script>
+	<script src="files/js/plus-minus.js?_v=20261016013551"></script>
 
-   <script src="files/js/line-alignment-on-comparison-page.js?_v=20261015172611"></script>
+   <script src="files/custom-select/script.js?_v=20261016013551"></script>
+
+   <!--<script src="files/js/line-alignment-on-comparison-page.js?_v=20261016013551"></script>-->
+
+   <script>
+	document.addEventListener('DOMContentLoaded', () => {
+
+
+
+		// назначение одинаковой высоты к верхним блокам
+		function setComparisonHeadHeight() {
+			const heads = comparison.querySelectorAll('.js-product-comparison-head');
+
+			if (!heads.length) return;
+
+			heads.forEach((head) => {
+				head.style.height = '';
+			});
+
+			const maxHeight = Math.max(...Array.from(heads, (head) => head.getBoundingClientRect().height));
+
+			heads.forEach((head) => {
+				head.style.height = `${maxHeight}px`;
+			});
+		}
+
+
+
+		// свернуть/развернуть
+		const comparison = document.querySelector('.product-comparison');
+		if (comparison) {
+			comparison.addEventListener('click', (event) => {
+				const button = event.target.closest('.comparison-group__toggle');
+
+				if (!button || !comparison.contains(button)) return;
+
+				const groupList = button.closest('.product-comparison__list[data-group]');
+				const group = groupList?.dataset.group;
+
+				if (!group) return;
+
+				const nextExpanded = button.getAttribute('aria-expanded') !== 'true';
+
+				button.setAttribute('aria-expanded', String(nextExpanded));
+
+				// Переключаем состояние группы слева и во всех слайдах справа.
+				comparison.querySelectorAll(
+						`.product-comparison__list[data-group="${group}"]`
+				).forEach((list) => {
+						list.toggleAttribute('data-collapsed', !nextExpanded);
+				});
+			});
+		}
+
+
+
+		// высота строк
+		if (!comparison) return;
+
+		function setUniqueHeight() {
+			const lists = comparison.querySelectorAll('.product-comparison__list[data-group]');
+
+			lists.forEach((list) => {
+				list.querySelectorAll(':scope > li').forEach((item) => {
+					item.style.height = '';
+				});
+			});
+
+			const groups = new Map();
+
+			lists.forEach((list) => {
+				const group = list.dataset.group;
+
+				if (!groups.has(group)) {
+					groups.set(group, []);
+				}
+				const items = [...list.querySelectorAll(':scope > li')];
+				groups.get(group).push(items);
+			});
+
+			groups.forEach((groupLists) => {
+				const rowCount = Math.max(0, ...groupLists.map((items) => items.length));
+				for (let index = 0; index < rowCount; index++) {
+					const items = groupLists.map((listItems) => listItems[index]).filter((item) => item && !item.closest('[hidden]'));
+					if (!items.length) continue;
+					const maxHeight = Math.max(...items.map((item) => item.getBoundingClientRect().height));
+					items.forEach((item) => {
+						item.style.height = `${maxHeight}px`;
+					});
+				}
+			});
+		}
+
+
+
+		// ResizeObserver
+		let resizeFrame;
+		function scheduleHeightUpdate() {
+			cancelAnimationFrame(resizeFrame);
+			resizeFrame = requestAnimationFrame(() => {
+				setComparisonHeadHeight();
+				setUniqueHeight();
+			});
+		}
+		scheduleHeightUpdate();
+		window.addEventListener('resize', scheduleHeightUpdate);
+		window.addEventListener('orientationchange', scheduleHeightUpdate);
+		if ('ResizeObserver' in window) {
+			const observer = new ResizeObserver(scheduleHeightUpdate);
+			observer.observe(comparison);
+		}
+
+
+
+		// подсчёт слайдов, очистки сравнения и удаления отдельных товаров
+		let sliderElement = document.querySelector('.product-comparison__slider');
+		let slideElements = sliderElement.querySelectorAll('.product-comparison__slide');
+		let numberOfSlides = slideElements.length;
+		let comparedElement = document.getElementById('compared');
+
+		comparedElement.textContent = numberOfSlides;
+
+		// Функция для обновления количества слайдов
+		function updateNumberOfSlides() {
+			let numberOfSlides = document.querySelectorAll('.product-comparison__slide').length;
+			document.getElementById('compared').textContent = numberOfSlides;
+		}
+
+		// Находим элемент с id "clear-list-product-comparison"
+		let clearListButton = document.getElementById('clear-list-product-comparison');
+
+		// Добавляем слушатель события click для кнопки очистки списка
+		clearListButton.addEventListener('click', () => {
+
+			// Находим все элементы с классом "product-comparison__slide"
+			let slideElements = document.querySelectorAll('.product-comparison__slide');
+
+			// Удаляем каждый найденный элемент
+			slideElements.forEach((slide) => {
+				slide.remove();
+			});
+
+			// Обновляем количество слайдов на 0
+			updateNumberOfSlides();
+
+			// Обновляем swiper
+			document.querySelector('.product-comparison__slider').swiper.update();
+
+			// Удаляем атрибуты style у всех li внутри .js-product-comparison-list
+			let comparisonListItems = document.querySelectorAll('.js-product-comparison-list li');
+
+			comparisonListItems.forEach((item) => {
+				item.removeAttribute('style');
+				item.parentNode.remove();
+
+				if (document.querySelector('.product-comparison__checkboxs')) {
+					document.querySelector('.product-comparison__checkboxs').remove();
+				}
+
+				if (document.querySelector('.product-comparison__clear-list')) {
+					document.querySelector('.product-comparison__clear-list').remove();
+				}
+			});
+		});
+
+		// Добавляем слушатели события click для кнопок удаления элементов
+		let productComparisonButtonsRemove = document.querySelectorAll('.product-comparison__buttonRemove');
+
+		productComparisonButtonsRemove.forEach((productComparisonButtonRemove) => {
+			productComparisonButtonRemove.addEventListener('click', () => {
+
+				let parentNode = productComparisonButtonRemove.parentNode;
+				productComparisonButtonRemove.parentNode.remove();
+
+				// Обновляем количество слайдов
+				updateNumberOfSlides();
+
+				// Обновляем swiper
+				document.querySelector('.product-comparison__slider').swiper.update();
+
+				// Если был удален последний элемент
+				if (document.querySelectorAll('.product-comparison__buttonRemove').length === 0) {
+
+					parentNode.remove();
+
+					if (document.querySelector('.product-comparison__checkboxs')) {
+						document.querySelector('.product-comparison__checkboxs').remove();
+					}
+
+					if (document.querySelector('.product-comparison__clear-list')) {
+						document.querySelector('.product-comparison__clear-list').remove();
+					}
+
+					let jsProductComparisonLists = document.querySelectorAll('.js-product-comparison-list');
+
+					jsProductComparisonLists.forEach((jsProductComparisonList) => {
+						if (jsProductComparisonList) {
+							jsProductComparisonList.remove();
+						}
+					});
+				}
+			});
+		});
+	});
+	</script>
 
 </body>
 </html>
