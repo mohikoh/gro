@@ -4,10 +4,10 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261014221729">
-   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261014221729">
-   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261014221729">
-   <link rel="stylesheet" href="css/style.min.css?_v=20261014221729">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261015172611">
+   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261015172611">
+   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261015172611">
+   <link rel="stylesheet" href="css/style.min.css?_v=20261015172611">
    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
    <title>Гравіювання в магазині GRO</title>
 </head>
@@ -4313,7 +4313,17 @@ document.addEventListener('click', (event) => {
                   </form>
                </div>
                <div class="popup__after">
-                  <h3>Очікуйте дзвінка нашого менеджера.</h3>
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="#12B76A"/>
+                     <path d="M24 10.5L13 21.5L8 16.5" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+                  </svg>
+                  <h2>Очікуйте дзвінка нашого менеджера.</h2>
+                  <p>Не зволікай, через 2 місяці твій телефон подешевшає на 2 499 ₴</p>
+                  <a href="" class="popup-link after-report-sent--popup__content-button close-popup">
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.125 3.75024L6.875 10.0002L13.125 16.2502" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>Повернутись
+                  </a>
                </div>
             </div>
          </div>
@@ -4329,7 +4339,7 @@ document.addEventListener('click', (event) => {
                </a>
                <div class="popup__before">
                   <h3>Замовити ремонт</h3>
-                  <div class="popup__wrap-block-product">
+                  <div class="popup__wrap-block-product updated">
                      <div class="wrap-photo">
                         <img class="js-service-popup-icon" width="44" height="44" src="#" alt="">
                      </div>
@@ -4341,6 +4351,10 @@ document.addEventListener('click', (event) => {
                      <input type="hidden" name="service_price" class="js-service-price">
 
                      <div class="tab-form__wrap-field">
+                        <label for="tab-form-name">Ваше ім’я</label>
+                        <input id="tab-form-name" type="text" placeholder="Степан">
+                     </div>
+                     <div class="tab-form__wrap-field">
                         <label for="tab-form-phone">Телефон</label>
                         <input id="tab-form-phone" type="text" placeholder="+380 XX XXX XX XX">
                      </div>
@@ -4348,9 +4362,32 @@ document.addEventListener('click', (event) => {
                         <label for="tab-form-email">Email (необов'язково)</label>
                         <input id="tab-form-email" type="text" placeholder="example@gmail.com">
                      </div>
-                     <div class="tab-form__wrap-field">
-                        <label for="tab-form-name">Ваше ім’я</label>
-                        <input id="tab-form-name" type="text" placeholder="Степан">
+                     <div class="tab-form__wrap-field wrap-custom-photo" data-file-upload>
+                        <label>Фото</label>
+                        <div class="tab-form__wrap-custom-photo full" data-file-dropzone>
+                           <input type="file" name="photo" accept=".jpg,.jpeg,.png,.heic,image/jpeg,image/png,image/heic" title="" data-file-input>
+                           <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                              <path d="M16 11V14.3333C16 14.7754 15.8244 16 14.3333 16H2.66667C2.22464 16 1.80072 15.8244 1.48816 15.5118C1.17559 15.1993 1 14.7754 1 14.3333V11M4.33333 5.16667L8.5 1L12.6667 5.16667M8.5 1V11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                           </svg>
+                           <div data-file-prompt>
+                              <p><span>Перетягніть файли сюди або виберіть їх</span></p>
+                              <p>Покажи екран, корпус і пошкодження, якщо є. <br>JPG, PNG, HEIC · до 10 МБ за фото</p>
+                           </div>
+                           <div class="file-upload-preview" data-file-preview hidden>
+                              <img src="" alt="Попередній перегляд фото" data-file-preview-image>
+                              <!--<span class="file-upload-preview__name" data-file-name></span>-->
+                           </div>
+                           <button type="button" data-file-remove hidden aria-label="Видалити фото">
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M9 1L1 9M1 1L9 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                           </button>
+                        </div>
+                        <div class="file-upload-messages" aria-live="polite">
+                           <p data-file-message data-file-error-type="format" hidden>Дозволено лише файли у форматах JPG, PNG або HEIC.</p>
+                           <p data-file-message data-file-error-type="size" hidden>Розмір файлу не повинен перевищувати 10 МБ.</p>
+                           <p data-file-message data-file-error-type="upload" hidden>Неможливо додати файл. Спробуйте вибрати його знову.</p>
+                        </div>
                      </div>
                      <div class="tab-form__wrap-field">
                         <label for="tab-form-comment">Поломка</label>
@@ -4358,17 +4395,9 @@ document.addEventListener('click', (event) => {
                            <textarea id="tab-form-comment" placeholder="Не працює кнопка вкл."></textarea>
                         </div>
                      </div>
-                     <div class="tab-form__wrap-custom-checkboxs">
-                        <label class="custom-checkbox">
-                           <input type="checkbox" class="custom-checkbox__input">
-                           <span class="custom-checkbox__box"></span>
-                           <span class="custom-checkbox__text">Зв'язатися через телеграм/вайбер</span>
-                        </label>
-                        <label class="custom-checkbox">
-                           <input type="checkbox" class="custom-checkbox__input" checked>
-                           <span class="custom-checkbox__box"></span>
-                           <span class="custom-checkbox__text">Відправка Новою Поштою. Знижка 5%</span>
-                        </label>
+                     <div class="tab-form__wrap-field">
+                        <label for="tab-form-name">Розмір гравіювання</label>
+                        <input id="tab-form-name" type="text" placeholder="Степан">
                      </div>
                      <button type="submit">Відправити</button>
                   </form>
@@ -4394,15 +4423,15 @@ document.addEventListener('click', (event) => {
 
 	</div>
 
-	<script src="files/swiper/js/swiper-bundle.min.js?_v=20261014221729"></script>
-	<script src="files/swiper/js/swiper-init.js?_v=20261014221729"></script>
+	<script src="files/swiper/js/swiper-bundle.min.js?_v=20261015172611"></script>
+	<script src="files/swiper/js/swiper-init.js?_v=20261015172611"></script>
 
-	<script src="files/js/jquery-3.7.1.min.js?_v=20261014221729"></script>
-	<script src="files/js/plus-minus.js?_v=20261014221729"></script>
+	<script src="files/js/jquery-3.7.1.min.js?_v=20261015172611"></script>
+	<script src="files/js/plus-minus.js?_v=20261015172611"></script>
 
-	<script src="js/script.min.js?_v=20261014221729"></script>
+	<script src="js/script.min.js?_v=20261015172611"></script>
 
-	<script src="files/js/demo-script.js?_v=20261014221729"></script>
+	<script src="files/js/demo-script.js?_v=20261015172611"></script>
 
 
    <script>
@@ -4422,13 +4451,208 @@ document.addEventListener('click', (event) => {
          });
       }
    </script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkUntpxgYywg_nlhREijLYWEUOHYan4dk&callback=initMap&_v=20261014221729"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkUntpxgYywg_nlhREijLYWEUOHYan4dk&callback=initMap&_v=20261015172611"></script>
 
-   <script src="files/tabs/script.js?_v=20261014221729"></script>
+   <script src="files/tabs/script.js?_v=20261015172611"></script>
 
 	<script>
 
       document.addEventListener("DOMContentLoaded", function() {
+
+         // для вибору зображення
+         document.querySelectorAll('[data-file-upload]').forEach(initFileUpload);
+         function initFileUpload(component) {
+            const dropzones = component.querySelectorAll('[data-file-dropzone]');
+
+            dropzones.forEach(dropzone => {
+               initFileUploadTile(component, dropzone);
+            });
+         }
+
+         function initFileUploadTile(component, dropzone) {
+            const messageContainer = component.closest('.wrap-custom-photo');
+            const input = dropzone.querySelector('[data-file-input]');
+            const preview = dropzone.querySelector('[data-file-preview]');
+            const previewImage = dropzone.querySelector('[data-file-preview-image]');
+            const fileName = dropzone.querySelector('[data-file-name]');
+            const removeButton = dropzone.querySelector('[data-file-remove]');
+
+            if (!input || !preview || !previewImage || !removeButton) {
+               return;
+            }
+
+            const MAX_FILE_SIZE = 10 * 1024 * 1024;
+            const ALLOWED_EXTENSIONS = ['jpg', 'jpeg', 'png', 'heic'];
+            const ALLOWED_TYPES = [
+               'image/jpeg',
+               'image/png',
+               'image/heic',
+               'image/heif'
+            ];
+
+            let previewUrl = null;
+
+            function showError(type) {
+               clearError();
+
+               const message = messageContainer?.querySelector(`.file-upload-messages [data-file-message][data-file-error-type="${type}"]`);
+
+               if (message) {
+                  message.hidden = false;
+                  message.classList.add('is-visible');
+               }
+
+               dropzone.classList.add('has-error');
+            }
+
+            function clearError() {
+               messageContainer?.querySelectorAll('.file-upload-messages [data-file-message]').forEach(message => {
+                  message.hidden = true;
+                  message.classList.remove('is-visible');
+               });
+
+               messageContainer?.querySelectorAll('[data-file-dropzone]').forEach(item => {
+                  item.classList.remove('has-error');
+               });
+            }
+
+            function clearPreview() {
+               if (previewUrl) {
+                  URL.revokeObjectURL(previewUrl);
+                  previewUrl = null;
+               }
+
+               previewImage.removeAttribute('src');
+               previewImage.hidden = false;
+
+               preview.hidden = true;
+               removeButton.hidden = true;
+
+               dropzone.classList.remove('has-file');
+
+               if (fileName) {
+                  fileName.textContent = '';
+               }
+            }
+
+            function clearFile() {
+               input.value = '';
+               clearPreview();
+               clearError();
+            }
+
+            function isAllowedFile(file) {
+               const extension = file.name.split('.').pop().toLowerCase();
+               const type = file.type.toLowerCase();
+
+               const validExtension = ALLOWED_EXTENSIONS.includes(extension);
+               const validType = !type || ALLOWED_TYPES.includes(type);
+
+               return validExtension && validType;
+            }
+
+            function renderFile(file) {
+               clearPreview();
+
+               preview.hidden = false;
+               removeButton.hidden = false;
+
+               dropzone.classList.add('has-file');
+
+               if (fileName) {
+                  fileName.textContent = file.name;
+               }
+
+               const extension = file.name.split('.').pop().toLowerCase();
+
+               if (extension === 'heic') {
+                  previewImage.hidden = true;
+                  return;
+               }
+
+               previewImage.hidden = false;
+
+               previewUrl = URL.createObjectURL(file);
+               previewImage.src = previewUrl;
+
+               previewImage.onerror = function () {
+                  previewImage.hidden = true;
+               };
+            }
+
+            function setFile(file) {
+               clearError();
+
+               if (!file) {
+                  return;
+               }
+
+               if (!isAllowedFile(file)) {
+                  clearFile();
+                  showError('format');
+                  return;
+               }
+
+               if (file.size > MAX_FILE_SIZE) {
+                  clearFile();
+                  showError('size');
+                  return;
+               }
+
+               try {
+                  const dataTransfer = new DataTransfer();
+                  dataTransfer.items.add(file);
+                  input.files = dataTransfer.files;
+               } catch (exception) {
+                  if (!input.files || input.files[0] !== file) {
+                     clearFile();
+                     showError('upload');
+                     return;
+                  }
+               }
+
+               renderFile(file);
+            }
+
+            input.addEventListener('change', function () {
+               const file = input.files && input.files[0];
+
+               if (!file) {
+                  return;
+               }
+
+               setFile(file);
+            });
+
+            removeButton.addEventListener('click', function (event) {
+               event.preventDefault();
+               event.stopPropagation();
+
+               clearFile();
+            });
+
+            dropzone.addEventListener('dragover', function (event) {
+               event.preventDefault();
+               dropzone.classList.add('is-dragover');
+            });
+
+            dropzone.addEventListener('dragleave', function (event) {
+               if (!dropzone.contains(event.relatedTarget)) {
+                  dropzone.classList.remove('is-dragover');
+               }
+            });
+
+            dropzone.addEventListener('drop', function (event) {
+               event.preventDefault();
+               dropzone.classList.remove('is-dragover');
+
+               const files = event.dataTransfer && event.dataTransfer.files;
+
+               if (files && files.length) {
+                  setFile(files[0]);
+               }
+            });
+         }
 
          // у блоці .we-engrave-on додавання класів для відкриття першого блоку працює до 860
          const mediaQuery = window.matchMedia('(max-width: 860px)');

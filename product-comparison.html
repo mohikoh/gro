@@ -4,10 +4,10 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261014221729">
-   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261014221729">
-   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261014221729">
-   <link rel="stylesheet" href="css/style.min.css?_v=20261014221729">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261015172611">
+   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261015172611">
+   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261015172611">
+   <link rel="stylesheet" href="css/style.min.css?_v=20261015172611">
    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
    <title>Порівняння товарів</title>
 </head>
@@ -2410,6 +2410,50 @@
 							</div>
 							<button id="clear-list-product-comparison" data-da="product-comparison__wrap-selected, last, 800" type="button" class="product-comparison__clear-list slider-display-delay display-delay">Очистити список</button>
 							<ul class="product-comparison__list js-product-comparison-list slider-display-delay display-delay">
+								
+								<!-- Дисплей -->
+								<li class="comparison-group" data-group="display">
+									<button type="button" class="comparison-group__toggle" aria-expanded="true">Дисплей</button>
+								</li>
+
+								<li data-group="display">
+									<p class="product-comparison__slideName">Діагональ екрана</p>
+								</li>
+								<li data-group="display">
+									<p class="product-comparison__slideName">Тип дисплея</p>
+								</li>
+								<li data-group="display">
+									<p class="product-comparison__slideName">Роздільна здатність</p>
+								</li>
+
+								<!-- Продуктивність -->
+								<li class="comparison-group" data-group="performance">
+									<button type="button" class="comparison-group__toggle" aria-expanded="true">Продуктивність</button>
+								</li>
+
+								<li data-group="performance">
+									<p class="product-comparison__slideName">Процесор</p>
+								</li>
+								<li data-group="performance">
+									<p class="product-comparison__slideName">Графічний процесор</p>
+								</li>
+								<li data-group="performance">
+									<p class="product-comparison__slideName">Оперативна пам'ять</p>
+								</li>
+
+								<!-- Камера -->
+								<li class="comparison-group" data-group="camera">
+									<button type="button" class="comparison-group__toggle" aria-expanded="true">Камера</button>
+								</li>
+
+								<li data-group="camera">
+									<p class="product-comparison__slideName">Основна камера</p>
+								</li>
+								<li data-group="camera">
+									<p class="product-comparison__slideName">Фронтальна камера</p>
+								</li>
+
+								<!--
 								<li data-list="producer">
 									<h4 class="product-comparison__slideName">Виробник</h4>
 								</li>
@@ -2443,6 +2487,8 @@
 								<li data-list="resolution">
 									<h4 class="product-comparison__slideName">Роздільна здатність</h4>
 								</li>
+								-->
+
 							</ul>
 						</div>
 						<div class="product-comparison__item">
@@ -2490,6 +2536,22 @@
                                     </div>
                                  </div>
 											<ul class="product-comparison__list js-product-comparison-list">
+
+												<li class="comparison-group" data-group="display">Дисплей</li>
+												<li data-group="display">7.6″</li>
+												<li data-group="display">LTPO OLED</li>
+												<li data-group="display">1878 х 2670</li>
+
+												<li class="comparison-group" data-group="performance">Продуктивність</li>
+												<li data-group="performance">A20 Pro</li>
+												<li data-group="performance">7-core GPU</li>
+												<li data-group="performance">12 ГБ</li>
+
+												<li class="comparison-group" data-group="camera">Камера</li>
+												<li data-group="camera">48 МП</li>
+												<li data-group="camera">12 МП</li>
+												
+												<!--
 												<li data-list="producer">Apple</li>
 												<li data-list="product-type">Смартфон</li>
 												<li data-list="guarantee">12 місяців</li>
@@ -2501,6 +2563,8 @@
 												<li data-list="communication">5G, 4G, 3G</li>
 												<li data-list="ram">2 ГБ</li>
 												<li data-list="resolution">2796x1290</li>
+												-->
+
 											</ul>
 										</div>
 										<div class="swiper-slide product-comparison__slide">
@@ -2525,6 +2589,22 @@
                                     </div>
 											</div>
 											<ul class="product-comparison__list js-product-comparison-list">
+												
+												<li class="comparison-group" data-group="display">Дисплей</li>
+												<li data-group="display">7.6″</li>
+												<li data-group="display">LTPO OLED</li>
+												<li data-group="display">1878 х 2670</li>
+
+												<li class="comparison-group" data-group="performance">Продуктивність</li>
+												<li data-group="performance">A20 Pro</li>
+												<li data-group="performance">7-core GPU</li>
+												<li data-group="performance">12 ГБ</li>
+
+												<li class="comparison-group" data-group="camera">Камера</li>
+												<li data-group="camera">48 МП</li>
+												<li data-group="camera">12 МП</li>
+
+												<!--
 												<li data-list="producer">Apple</li>
 												<li data-list="product-type">Смартфон</li>
 												<li data-list="guarantee">12 місяців</li>
@@ -2536,8 +2616,12 @@
 												<li data-list="communication">5G, 4G, 3G</li>
 												<li data-list="ram">3 ГБ</li>
 												<li data-list="resolution">2796x1290</li>
+												-->
+
 											</ul>
 										</div>
+
+										<!--
 										<div class="swiper-slide product-comparison__slide">
 											<button class="product-comparison__buttonRemove" type="button">
 												<img src="images/svg/product-comparison-button-remove-icon.svg" alt="">
@@ -2554,7 +2638,7 @@
                                        <p>58 199 <span class="currency icon">₴</span><span class="currency letters">грн.</span></p>
                                        <h4><a href="product.html">iPhone 13</a></h4>
                                        <div class="wrap-in-stock">
-                                          <p class="page-product__status in-stock">В наявності</p> <!-- В наявності - in-stock, Немає в наявності - no-in-stock, Передзамовлення - pre-order -->
+                                          <p class="page-product__status in-stock">В наявності</p>
                                           <p>Забрати сьогодні</p>
                                        </div>
                                     </div>
@@ -2589,7 +2673,7 @@
                                        <p>58 199 <span class="currency icon">₴</span><span class="currency letters">грн.</span></p>
                                        <h4><a href="product.html">iPhone 13 128GB Midnight 13 128GB Midnight iPhone 13 128GB Midnight 13 128GB Midnight</a></h4>
                                        <div class="wrap-in-stock">
-                                          <p class="page-product__status in-stock">В наявності</p> <!-- В наявності - in-stock, Немає в наявності - no-in-stock, Передзамовлення - pre-order -->
+                                          <p class="page-product__status in-stock">В наявності</p>
                                        </div>
                                     </div>
 											</div>
@@ -2623,7 +2707,7 @@
                                        <p>58 199 <span class="currency icon">₴</span><span class="currency letters">грн.</span></p>
                                        <h4><a href="product.html">iPhone 13 128GB Midnight 13 128GB Midnight iPhone 13 128GB Midnight 13 128GB Midnight</a></h4>
                                        <div class="wrap-in-stock">
-                                          <p class="page-product__status in-stock">В наявності</p> <!-- В наявності - in-stock, Немає в наявності - no-in-stock, Передзамовлення - pre-order -->
+                                          <p class="page-product__status in-stock">В наявності</p>
                                        </div>
                                     </div>
 											</div>
@@ -2641,6 +2725,8 @@
 												<li data-list="resolution">2796x1290</li>
 											</ul>
 										</div>
+										-->
+
 									</div>
 								</div>
 							</div>
@@ -3702,17 +3788,17 @@ document.addEventListener('click', (event) => {
 </script>
 	</div>
 
-	<script src="files/swiper/js/swiper-bundle.min.js?_v=20261014221729"></script>
-	<script src="files/swiper/js/swiper-init.js?_v=20261014221729"></script>
+	<script src="files/swiper/js/swiper-bundle.min.js?_v=20261015172611"></script>
+	<script src="files/swiper/js/swiper-init.js?_v=20261015172611"></script>
 
-	<script src="js/script.min.js?_v=20261014221729"></script>
+	<script src="js/script.min.js?_v=20261015172611"></script>
 
-	<script src="files/js/demo-script.js?_v=20261014221729"></script>
+	<script src="files/js/demo-script.js?_v=20261015172611"></script>
 
-	<script src="files/js/jquery-3.7.1.min.js?_v=20261014221729"></script>
-	<script src="files/js/plus-minus.js?_v=20261014221729"></script>
+	<script src="files/js/jquery-3.7.1.min.js?_v=20261015172611"></script>
+	<script src="files/js/plus-minus.js?_v=20261015172611"></script>
 
-   <script src="files/js/line-alignment-on-comparison-page.js?_v=20261014221729"></script>
+   <script src="files/js/line-alignment-on-comparison-page.js?_v=20261015172611"></script>
 
 </body>
 </html>
