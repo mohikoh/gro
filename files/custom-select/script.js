@@ -145,6 +145,37 @@ document.querySelectorAll('.js-linked-to-visual-appearance').forEach(container =
 
 		const cpWrapSelectMobile = container.querySelector('.catalog-page__wrap-select-by-mobile--block');
 		if (cpWrapSelectMobile) {
+			const closeMobileSelect = () => {
+				document.body.classList.remove('_lock');
+				cpWrapSelectMobile.classList.remove('mobile-short-by-show');
+				wrapper.classList.remove('_active');
+			};
+
+			current.addEventListener('click', () => {
+				const isOpen = cpWrapSelectMobile.classList.contains('mobile-short-by-show');
+
+				if (isOpen) {
+					closeMobileSelect();
+				} else {
+					document.body.classList.add('_lock');
+					cpWrapSelectMobile.classList.add('mobile-short-by-show');
+				}
+			});
+
+			const closeBtn = cpWrapSelectMobile.querySelector('.catalog-page__wrap-select-by-mobile--head button[type="button"]');
+
+			closeBtn?.addEventListener('click', closeMobileSelect);
+
+			cpWrapSelectMobile.addEventListener('click', (event) => {
+				if (event.target === cpWrapSelectMobile) {
+					closeMobileSelect();
+				}
+			});
+		}
+
+		/*
+		const cpWrapSelectMobile = container.querySelector('.catalog-page__wrap-select-by-mobile--block');
+		if (cpWrapSelectMobile) {
 			current.addEventListener('click', () => {
 				document.body.classList.toggle('_lock');
 				cpWrapSelectMobile.classList.toggle('mobile-short-by-show');
@@ -158,6 +189,7 @@ document.querySelectorAll('.js-linked-to-visual-appearance').forEach(container =
 				});
 			}
 		}
+		*/
 	}
 });
 

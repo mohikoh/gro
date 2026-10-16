@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function() {
             originalParent.prepend(searchForm);
         }
     });
-
+    
 });
 
 // Show items mega menu

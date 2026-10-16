@@ -1,28 +1,68 @@
-    // Range for price
-    function getVals() {
-        // Get slider values
-        var parent = this.parentNode;
-        var slides = parent.getElementsByTagName("input");
-        var slide1 = parseFloat( slides[0].value );
-        var slide2 = parseFloat( slides[1].value );
-        // Neither slider will clip the other, so make sure we determine which is larger
-        if(slide1 > slide2) {
-            var tmp = slide2; slide2 = slide1; slide1 = tmp;
-        }
-        var displayElement = parent.getElementsByClassName("rangeValues")[0];
-        displayElement.innerHTML = "$ " + slide1 + "k - $" + slide2 + "k";
-    }
-      
+// Range for price
+function initPriceRange() {
+    document.querySelectorAll('.rangeslider').forEach((parent) => {
+        const minInput = parent.querySelector('.min');
+        const maxInput = parent.querySelector('.max');
+        const track = parent.querySelector('.rangeslider__track');
 
-    // Initialize Sliders
-    var sliderSections = document.getElementsByClassName("range-slider");
-    for(var x = 0; x < sliderSections.length; x++) {
-        var sliders = sliderSections[x].getElementsByTagName("input");
-        for(var y = 0; y < sliders.length; y++) {
-            if(sliders[y].type ==="range") {
-                sliders[y].oninput = getVals;
-                // Manually trigger event first time to display values
-                sliders[y].oninput();
-            }
+        if (!minInput || !maxInput || !track) {
+            console.warn('Не найден input или .rangeslider__track', parent);
+            return;
         }
-    }
+
+        function updateRange() {
+            const minValue = Number(minInput.min);
+            const maxValue = Number(minInput.max);
+            const range = maxValue - minValue || 1;
+
+            const min = Number(minInput.value);
+            const max = Number(maxInput.value);
+
+            const start = ((min - minValue) / range) * 100;
+            const end = ((max - minValue) / range) * 100;
+
+            track.style.setProperty('--range-start', `${start}%`);
+            track.style.setProperty('--range-width', `${end - start}%`);
+
+            console.log({
+                min,
+                max,
+                start,
+                width: end - start
+            });
+        }
+
+        minInput.addEventListener('input', updateRange);
+        maxInput.addEventListener('input', updateRange);
+
+        updateRange();
+    });
+}
+document.addEventListener('DOMContentLoaded', initPriceRange);
+
+document.addEventListener('reset', (event) => {
+    setTimeout(() => {
+        const form = event.target;
+
+        form.querySelectorAll('.rangeslider').forEach((parent) => {
+            const minInput = parent.querySelector('.min');
+            const maxInput = parent.querySelector('.max');
+            const track = parent.querySelector('.rangeslider__track');
+
+            if (!minInput || !maxInput || !track) return;
+
+            const minValue = Number(minInput.min);
+            const maxValue = Number(minInput.max);
+            const range = maxValue - minValue || 1;
+
+            const min = Number(minInput.value);
+            const max = Number(maxInput.value);
+
+            const start = ((min - minValue) / range) * 100;
+            const end = ((max - minValue) / range) * 100;
+
+            track.style.setProperty('--range-start', `${start}%`);
+            track.style.setProperty('--range-width', `${end - start}%`);
+        });
+    }, 0);
+}, true);
