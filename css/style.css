@@ -1302,6 +1302,28 @@ form textarea:focus-visible {
   outline: none;
 }
 
+.catalog-widget.widget-price .wrap-fields {
+  margin: -3px -7px -3px;
+  padding: 6px 3px 3px;
+}
+
+.catalog-widget.widget-price .wrap-fields .wrap-field input {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.catalog-widget.widget-price .wrap-fields .wrap-field:has(input:focus-visible) {
+  background-color: #fff;
+  border-color: #EC008C !important;
+  box-shadow: 0 0 0 3px rgba(236, 0, 140, 0.12);
+}
+
+.custom-select._active .custom-select__current {
+  background-color: #fff;
+  border-color: #EC008C !important;
+  box-shadow: 0 0 0 3px rgba(236, 0, 140, 0.12);
+}
+
 /* n Select */
 
 /* n Lazy Loading */
