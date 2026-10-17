@@ -5378,12 +5378,25 @@ body._touch .header .menu__list > li._active .menu__arrow {
   padding-bottom: 0 !important;
 }
 
+.mobile-block-contacts .header__languagesSelect {
+  margin-bottom: 10px !important;
+  margin-top: 15px !important;
+}
+
 .mobile-block-contacts .contact__blockMap {
   display: block;
   height: 360px;
   overflow: hidden;
   width: 800px;
   max-width: 100%;
+}
+
+.mobile-block-contacts__wrap-content {
+  padding-top: 26px;
+}
+
+.mobile-block-contacts .contact__items {
+  padding-bottom: 40px;
 }
 
 .mobile-block-contacts .header__info {
@@ -5395,6 +5408,13 @@ body._touch .header .menu__list > li._active .menu__arrow {
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+
+.mobile-block-contacts .block__title p:nth-child(1) {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 0 0 8px;
 }
 
 .mobile-block-contacts .header__info {
@@ -14196,7 +14216,7 @@ body.lock .page-product__wrapHeadLinks,
 
 .contact__blockMap {
   display: block;
-  height: 492px;
+  height: 440px;
   overflow: hidden;
   width: 100%;
 }
@@ -14285,6 +14305,13 @@ body.lock .page-product__wrapHeadLinks,
      object-position: center;
   position: absolute;
   top: 0;
+  width: 100%;
+}
+
+.map {
+  border: 2px solid #D1D1D7;
+  border-radius: 8px;
+  height: 100%;
   width: 100%;
 }
 
@@ -18415,7 +18442,7 @@ body.lock .page-product__wrapHeadLinks,
 }
 
 .phone-toggle__btn {
-  margin: -1px 0 1px 9px;
+  margin: 1px 0 -1px 9px;
 }
 
 .phone-toggle__btn.is-active .show-text {
@@ -18444,9 +18471,8 @@ body.lock .page-product__wrapHeadLinks,
 }
 
 .phone-toggle .footer__phone .phone-mask {
-  font-size: 17px;
   display: block;
-  margin: -1px 0 1px 4px;
+  margin: 1px 0 -1px 4px;
 }
 
 .floating-product-price {
@@ -19577,6 +19603,7 @@ body.lock .page-product__wrapHeadLinks,
 
   .mobile-block-contacts__wrap-content {
     display: none;
+    padding-top: 26px;
   }
 
   .mobile-block-contacts__messengers {
@@ -20987,6 +21014,10 @@ body.lock .page-product__wrapHeadLinks,
     width: 100px;
   }
 
+  .contact__blockMap {
+    height: 340px;
+  }
+
   .contact__section-slider.second .mySwiper .swiper-slide {
     padding-bottom: 18%;
   }
@@ -21397,6 +21428,10 @@ body.lock .page-product__wrapHeadLinks,
   .contact__item .block {
     display: flex;
     flex-direction: column;
+  }
+
+  .contact__blockMap {
+    height: 260px;
   }
 
   .cooperation__blockText p:not(:last-child) {
@@ -23854,6 +23889,20 @@ body.lock .page-product__wrapHeadLinks,
     width: calc(100% - 15px);
   }
 
+  .mobile-block-contacts__wrap-content {
+    padding-top: 26px;
+  }
+
+  .mobile-block-contacts .contact__items {
+    padding-top: 20px;
+  }
+
+  .mobile-block-contacts .block__title p:nth-child(1) {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 3px;
+  }
+
   .mobile-block-contacts .header__wrapPhone .footer__phone {
     font-size: 13px;
     line-height: 20px;
@@ -25817,7 +25866,7 @@ body.lock .page-product__wrapHeadLinks,
   }
 
   .contact__blockMap {
-    height: 157px;
+    height: 151px !important;
   }
 
   .contact__section-slider {
@@ -25839,6 +25888,11 @@ body.lock .page-product__wrapHeadLinks,
     margin-right: -15px;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .map {
+    width: 600px;
+    max-width: 100%;
   }
 
   .payment-and-delivery h1 {

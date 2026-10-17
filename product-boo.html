@@ -4,10 +4,10 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261017023436">
-   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261017023436">
-   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261017023436">
-   <link rel="stylesheet" href="css/style.min.css?_v=20261017023436">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261017112644">
+   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261017112644">
+   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261017112644">
+   <link rel="stylesheet" href="css/style.min.css?_v=20261017112644">
    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
    <title>iPhone 15 Pro Max 256GB Blue Titanium б/у</title>
 </head>
@@ -2411,14 +2411,14 @@
                      <p>Будні: з 10 до 20 <span>|</span> Сб-Нд: з 12 до 18</p>
                   </div>
                   <div class="block__text">
-                     <div class="block__content first-block-content slider-display-delay display-delay"></div>
+                     <div class="block__content first-block-content-mobile slider-display-delay display-delay"></div>
                   </div>
                </div>
             </div>
          </div>
-         <div data-da="first-block-content, 2, 575" class="contact__item">
+         <div data-da="first-block-content-mobile, 2, 575" class="contact__item">
             <div class="contact__blockMap">
-               <div id="map"></div>
+               <div class="map"></div>
             </div>
          </div>
       </div>
@@ -2467,25 +2467,6 @@
          </ul>
       </div>
       -->
-
-      <script>
-         function initMap() {
-            var uluru = {
-               lat: 50.436637,
-               lng: 30.5073116
-            };
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-               zoom: 17,
-               center: uluru
-            });
-            var marker = new google.maps.Marker({
-               position: uluru,
-               map: map
-            });
-         }
-      </script>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkUntpxgYywg_nlhREijLYWEUOHYan4dk&callback=initMap&_v=20261017023436"></script>
 
    </div>
 </div>
@@ -5132,6 +5113,28 @@ document.addEventListener('click', (event) => {
 });
 </script>
 
+<script>
+   function initMap() {
+      var uluru = {
+         lat: 50.436637,
+         lng: 30.5073116
+      };
+      document.querySelectorAll('.map').forEach(function(mapElement) {
+         const map = new google.maps.Map(mapElement, {
+            zoom: 17,
+            center: uluru
+         });
+
+         new google.maps.Marker({
+            position: uluru,
+            map: map
+         });
+      });
+   }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkUntpxgYywg_nlhREijLYWEUOHYan4dk&callback=initMap&_v=20261017112644"></script>
+
+
       <div id="show-form-buy-in-one-click-popup" class="popup popup__form-reviews">
          <div class="popup__body">
             <div class="popup__content before-active">
@@ -5758,17 +5761,17 @@ document.addEventListener('click', (event) => {
    
    </div>
    
-   <script src="files/swiper/js/swiper-bundle.min.js?_v=20261017023436"></script>
-   <script src="files/swiper/js/swiper-init.js?_v=20261017023436"></script>
+   <script src="files/swiper/js/swiper-bundle.min.js?_v=20261017112644"></script>
+   <script src="files/swiper/js/swiper-init.js?_v=20261017112644"></script>
 
-   <script src="js/script.min.js?_v=20261017023436"></script>
+   <script src="js/script.min.js?_v=20261017112644"></script>
 
-   <script src="files/js/demo-script.js?_v=20261017023436"></script>
+   <script src="files/js/demo-script.js?_v=20261017112644"></script>
 
-   <script src="files/js/jquery-3.7.1.min.js?_v=20261017023436"></script>
-   <script src="files/js/plus-minus.js?_v=20261017023436"></script>
+   <script src="files/js/jquery-3.7.1.min.js?_v=20261017112644"></script>
+   <script src="files/js/plus-minus.js?_v=20261017112644"></script>
 
-   <script src="files/custom-select/script.js?_v=20261017023436"></script>
+   <script src="files/custom-select/script.js?_v=20261017112644"></script>
 
 </body>
 </html>
