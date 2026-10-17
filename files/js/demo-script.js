@@ -322,3 +322,29 @@ document.querySelectorAll('[data-show-repair-items]').forEach(block => {
     }
 
 });
+
+// Tooltips
+document.addEventListener('click', function(event) {
+    const trigger = event.target.closest('.page-product__tooltip-trigger');
+    const wrap = event.target.closest('.page-product__wrap-icon');
+
+    if (trigger && wrap) {
+        const isOpen = wrap.classList.contains('show-tooltip');
+
+        document.querySelectorAll('.page-product__wrap-icon.show-tooltip').forEach(function(item) {
+            item.classList.remove('show-tooltip');
+        });
+
+        if (!isOpen) {
+            wrap.classList.add('show-tooltip');
+        }
+
+        return;
+    }
+
+    if (!wrap) {
+        document.querySelectorAll('.page-product__wrap-icon.show-tooltip').forEach(function(item) {
+            item.classList.remove('show-tooltip');
+        });
+    }
+});
