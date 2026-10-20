@@ -233,9 +233,49 @@ document.addEventListener("DOMContentLoaded", function() {
         wrapper.classList.toggle('open-form', isOpen);
         if (isOpen) {
             headerBottom.prepend(searchForm);
+            setTimeout(() => {
+                searchForm.querySelector('#search-field')?.focus();
+                //document.documentElement.classList.add('search-in-focus');
+            });
         } else {
             originalParent.prepend(searchForm);
+            document.body.classList.remove('_lock');
+            document.documentElement.classList.remove('search-in-focus');
         }
+    });
+
+    // эффект наведения на звезды в отзывах
+    document.querySelectorAll('.wrap-stars').forEach(starsWrapper => {
+        const stars = [...starsWrapper.querySelectorAll('img')];
+
+        let selectedRating = stars.filter(star => star.getAttribute('src').includes('star-orange.svg')).length;
+
+        function setRating(rating, hoverIndex = -1) {
+            stars.forEach((star, index) => {
+                if (index === hoverIndex) {
+                    star.src = 'images/svg/star-gray-hover.svg';
+                } else if (index < rating) {
+                    star.src = 'images/svg/star-orange.svg';
+                } else {
+                    star.src = 'images/svg/star-gray.svg';
+                }
+            });
+        }
+
+        stars.forEach((star, index) => {
+            star.addEventListener('mouseenter', () => {
+                setRating(selectedRating, index);
+            });
+
+            star.addEventListener('click', () => {
+                selectedRating = index + 1;
+                setRating(selectedRating);
+            });
+        });
+
+        starsWrapper.addEventListener('mouseleave', () => {
+            setRating(selectedRating);
+        });
     });
     
 });
