@@ -4,15 +4,15 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261113140927">
-   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261113140927">
-   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261113140927">
-   <link rel="stylesheet" href="css/style.min.css?_v=20261113140927">
-   <link rel="stylesheet" href="files/new-style.css?_v=20261113140927">
+   <link rel="stylesheet" href="files/swiper/css/swiper-bundle.min.css?_v=20261113224921">
+   <link rel="stylesheet" href="files/select2/css/select2.min.css?_v=20261113224921">
+   <link rel="stylesheet" href="files/custom-select/style.css?_v=20261113224921">
+   <link rel="stylesheet" href="css/style.min.css?_v=20261113224921">
+   <link rel="stylesheet" href="files/new-style.css?_v=20261113224921">
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap&_v=20261113140927" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap&_v=20261113224921" rel="stylesheet">
 
    <!--<link rel="icon" type="image/svg+xml" href="favicon.svg">-->
    <title>Дякуємо, Ваше замовлення прийнято</title>
@@ -20,16 +20,29 @@
 
 <body>
    <div class="wrapper">
-      <div class="block-notify-above-header">
+      <div class="block-notify-above-header no-desktop"><!-- no-desktop -->
    <div class="n_container">
       <div class="block-notify-above-header__content">
-         <div class="label warning">УВАГА</div> <!-- <div class="label info">ІНФО</div> -->
+
+         <!-- для первого варианта (темный фон) -> -->
+         <!-- <div class="label warning">УВАГА</div> -->
+         <!-- <div class="label info">ІНФО</div> -->
+         <!--
          <p>У нас збої в роботі телефонії. Пишіть нам у месенджери: <a href="https://gro.ua/m/">gro.ua/m/</a></p>
          <button type="button" class="block-notify-above-header__button">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                <path d="M15.625 4.375L10 10M10 10L4.375 15.625M10 10L4.375 4.375M10 10L15.625 15.625" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
             </svg>
          </button>
+         -->
+         <!-- <- для первого варианта (темный фон) -->
+
+         <!-- для второго варианта (с классом no-desktop) -> -->
+         <p class="block-notify-above-header__second-option">
+            <a href="#"><strong>Чорна П’ятниця</strong> · ще 2д 09г 44хв</a>
+         </p>
+         <!-- <- для второго варианта (с классом no-desktop) -> -->
+
       </div>
    </div>
 </div>
@@ -81,9 +94,19 @@
             <div class="menu__body">
                <nav class="menu-topmenu-container">
                   <ul class="menu__list">
-                     <li class="menu-item promotions"><!-- promotions -->
+                     <li class="menu-item big-promotions">
+                        <a class="menu__link" href="promotions.html"><strong>Чорна П’ятниця</strong> · ще 2д 09г 44хв</a>
+                     </li>
+                     <!--
+                     <li class="menu-item big-promotions expires-24-hours">
+                        <a class="menu__link" href="promotions.html">Кіберпонеділок · ще 05:12:40</a>
+                     </li>
+                     -->
+                     <!--
+                     <li class="menu-item promotions">
                         <a class="menu__link" href="promotions.html">Акції</a>
                      </li>
+                     -->
                      <li class="menu-item"> <!-- current-menu-item current_page_item -->
                         <a class="menu__link" href="repair-of-apple-equipment.html">Сервіс GroPro!</a>
                      </li>
@@ -624,6 +647,13 @@
    <div class="large-catalog-menu">
       <div class="n_container">
          <div class="large-catalog-menu__items">
+            <div class="large-catalog-menu__new-link">
+               <ul>
+                  <li class="menu-item promotions">
+                     <a class="menu__link" href="promotions.html">Акції</a>
+                  </li>
+               </ul>
+            </div>
             <div class="large-catalog-menu__item sidebar-catalog-menu">
                <nav class="catalog-menu-in-sidebar highlight-active-item">
                   <ul>
@@ -3710,17 +3740,17 @@ document.addEventListener('click', (event) => {
       }
    }
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkUntpxgYywg_nlhREijLYWEUOHYan4dk&callback=initMap&_v=20261113140927"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkUntpxgYywg_nlhREijLYWEUOHYan4dk&callback=initMap&_v=20261113224921"></script>
 
-<script src="files/new-script.js?_v=20261113140927"></script>
+<script src="files/new-script.js?_v=20261113224921"></script>
    </div>
 
-   <script src="js/script.min.js?_v=20261113140927"></script>
+   <script src="js/script.min.js?_v=20261113224921"></script>
 
-   <script src="files/js/demo-script.js?_v=20261113140927"></script>
+   <script src="files/js/demo-script.js?_v=20261113224921"></script>
    
-   <script src="files/swiper/js/swiper-bundle.min.js?_v=20261113140927"></script>
-   <script src="files/swiper/js/swiper-init.js?_v=20261113140927"></script>
+   <script src="files/swiper/js/swiper-bundle.min.js?_v=20261113224921"></script>
+   <script src="files/swiper/js/swiper-init.js?_v=20261113224921"></script>
    
    <script>
       document.addEventListener('click', async (event) => {
