@@ -1,6 +1,7 @@
 // Уведомление над шапкой
 document.addEventListener('DOMContentLoaded', function () {
    const STORAGE_KEY = 'notifyAboveHeaderClosed';
+   const MOBILE_MAX = 800; // граница для блока с классом no-desktop
    const notify = document.querySelector('.block-notify-above-header');
 
    if (!notify) return;
@@ -15,16 +16,25 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
    }
 
-   function updateNotifyHeight() {
-      if (document.body.contains(notify)) {
-         document.documentElement.style.setProperty('--notify-height', notify.offsetHeight + 'px');
-      }
+   // Активно ли уведомление при текущей ширине экрана
+   function isActive() {
+      return !notify.classList.contains('no-desktop') ||
+         window.matchMedia('(max-width: ' + MOBILE_MAX + 'px)').matches;
    }
 
-   document.body.classList.add('has-notify-above-header');
-   updateNotifyHeight();
+   function update() {
+      if (!document.body.contains(notify)) return;
 
-   window.addEventListener('resize', updateNotifyHeight);
+      const active = isActive();
+      document.body.classList.toggle('has-notify-above-header', active);
+      document.documentElement.style.setProperty(
+         '--notify-height',
+         active ? notify.offsetHeight + 'px' : '0px'
+      );
+   }
+
+   update();
+   window.addEventListener('resize', update);
 
    const closeBtn = notify.querySelector('.block-notify-above-header__button');
 
@@ -33,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
          notify.remove();
          document.body.classList.remove('has-notify-above-header');
          document.documentElement.style.setProperty('--notify-height', '0px');
-         window.removeEventListener('resize', updateNotifyHeight);
+         window.removeEventListener('resize', update);
 
          try {
             localStorage.setItem(STORAGE_KEY, '1');
@@ -134,4 +144,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
    tickAll();
    setInterval(tickAll, 1000);
+});
+
+// Класс родителю, если внутри есть large-catalog-menu__new-link
+document.addEventListener('DOMContentLoaded', function () {
+   document.querySelectorAll('.large-catalog-menu__new-link').forEach(function (link) {
+      if (link.parentElement) {
+         link.parentElement.classList.add('has-new-link');
+      }
+   });
 });
