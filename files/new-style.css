@@ -146,9 +146,15 @@
    background-color: #000;
 }
 
+body:not(.has-notify-above-header) .block-notify-above-header {
+   opacity: 0;
+   pointer-events: none;
+   user-select: none;
+}
+
 .block-notify-above-header {
    background-color: #000;
-   border-radius: 16px 16px 0 0;
+   /*border-radius: 16px 16px 0 0;*/
    left: 0;
    padding: 10px 0;
    position: fixed;
@@ -269,6 +275,7 @@ body.has-notify-above-header .catalog-menu-block .large-catalog-menu__item.item-
 body.has-notify-above-header main.main {
    margin-top: var(--notify-height);
 }
+body.has-notify-above-header .header::after,
 body.has-notify-above-header .header__wrapForm._active form,
 body.has-notify-above-header .header .header__wrapper {
    top: var(--notify-height);
