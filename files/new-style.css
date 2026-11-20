@@ -306,6 +306,9 @@ body.has-notify-above-header .header .header__wrapper {
    border-radius: 100px !important;
    padding: 8px 15px !important;
 }
+.promotions__tabs .tab.tab-active {
+   background-color: #fff0fa !important;
+}
 .promotions__tabs .tab span {
    color: #A7A7B0 !important;
 }
@@ -413,6 +416,7 @@ body.has-notify-above-header .header .header__wrapper {
    margin: 0;
    position: relative;
    text-align: center;
+   font-variant-numeric: tabular-nums;
 }
 .promotions-banner__counter-item:not(:first-child) .number::before,
 .promotions-banner__counter-item:not(:first-child) .number::after {
@@ -768,8 +772,11 @@ body.has-notify-above-header .header .header__wrapper {
    display: flex;
    justify-content: center;
    height: 48px;
+   font-size: 16px;
+   line-height: 24px;
    margin: 20px 0 0;
    padding: 6px 12px;
+   text-align: center;
    transition: 0.3s ease 0s;
    width: 100%;
 }
